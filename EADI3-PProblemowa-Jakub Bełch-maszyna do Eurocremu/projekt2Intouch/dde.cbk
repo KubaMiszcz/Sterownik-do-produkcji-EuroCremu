@@ -1,0 +1,56 @@
+Begin DDE Information.
+    Last DDE Source:	2
+Begin DDE Source Definition.
+    Source Name:		Galaxy
+    Application Name:		\\NA\NA
+    Topic Name:			NA
+    DDE Source ID:		1
+    Request Initial Data:	1
+    Always Advise:		0
+    SuiteLink:			3
+    Begin DDE Points
+    End DDE Points
+End DDE Source Definition.
+Begin DDE Source Definition.
+    Source Name:		mbenet
+    Application Name:		mbenet
+    Topic Name:			mbenet
+    DDE Source ID:		2
+    Request Initial Data:	1
+    Always Advise:		0
+    SuiteLink:			1
+    Begin DDE Points
+        EPS_TOL_CZEKOLADY_PC;0041:  44024
+        EPS_TOL_ORZESZKOW_PC;0040:  44025
+        V_czekolady;003F:  44023
+        V_orzeszkow;003E:  44022
+        Auto_reg_c;003D:  40041
+        C_CZEKOLADY_LOW;003C:  40036
+        EPS_C_CZEKOLADY_PC;003B:  44020
+        EPS_C_ORZESZKOW_PC;003A:  44019
+        C_CZEKOLADY_HIGH;0039:  40035
+        C_ORZESZKOW_LOW;0038:  40034
+        C_ORZESZKOW_HIGH;0037:  40033
+        V_SUM_MIESZALNIK_OUT_PC;0036:  44012
+        zaworMieszalnikOUT;0035:  40014
+        V_SUM_CZEKOLADY_PC;0034:  44010
+        QmieszalnikOUT;0033:  44008
+        C_ORZESZKOW_PC;0032:  44013
+        vMieszalnikFULL;0031:  40012
+        vMieszalnikHIGH;0030:  40001
+        vMieszalnikLOW;002F:  40011
+        vMieszalnikEMPTY;002E:  40013
+        V_SUM_ORZESZKOW_PC;002D:  44011
+        Qczekolada;002C:  44003
+        Qorzeszki;002B:  44002
+        zaworCzekolada;002A:  40007
+        zaworOrzeszki;0029:  40002
+        C_CZEKOLADY_PC;0028:  44014
+        V_wmieszalniku;0027:  44005
+        SilnikDziala;0026:  40008
+        REQ_C_CZEKOLADY_PC;0025:  44016
+        REQ_C_ORZESZKOW_PC;0024:  44015
+        START_ALL;0023:  40017
+    End DDE Points
+End DDE Source Definition.
+End DDE Information.

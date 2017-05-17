@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CPDEV version="1.0">
+  <PROJECT name="projekt2">
+    <METRIC>
+      <COMPANY><![CDATA[]]></COMPANY>
+      <MANAGER><![CDATA[KubaMiszcz]]></MANAGER>
+      <VERSION><![CDATA[]]></VERSION>
+      <CREATED year="2016" month="5" day="29" hour="10" minutes="48" seconds="11" milisec="683" />
+    </METRIC>
+    <OPTIONS>
+      <PV value="00000122" />
+      <II value="00000038" />
+      <CPVis used="0" />
+      <LC year="2016" month="6" day="6" hour="0" minutes="36" seconds="24" milisec="609" />
+      <LCF>
+        <ABSOLUTE>C:\Program Files\CPDevFBD\VM\VM-SMC.xml</ABSOLUTE>
+        <APPVARS>$VMsDir\VM-SMC.xml</APPVARS>
+        <ENVVARS>%ProgramFiles%\CPDevFBD\VM\VM-SMC.xml</ENVVARS>
+      </LCF>
+      <CREATOR>1.0.9.47</CREATOR>
+      <LASTSAVEDWITH>1.0.9.47</LASTSAVEDWITH>
+    </OPTIONS>
+    <LIBRARY>
+      <PKG name="IEC_61131" version="131072" filename="C:\Program Files\CPDevFBD\Biblioteki\IEC 61131-3.lcp">
+        <CREATED year="2012" month="12" day="10" hour="15" minutes="11" seconds="28" milisec="125" />
+        <APPVARS>$LibDir\IEC 61131-3.lcp</APPVARS>
+        <ENVVARS>%ProgramFiles%\CPDevFBD\Biblioteki\IEC 61131-3.lcp</ENVVARS>
+        <IMP name="CTD" type="FBLK" />
+        <IMP name="CTU" type="FBLK" />
+        <IMP name="CTUD" type="FBLK" />
+        <IMP name="F_TRIG" type="FBLK" />
+        <IMP name="R_TRIG" type="FBLK" />
+        <IMP name="RS" type="FBLK" />
+        <IMP name="SEMA" type="FBLK" />
+        <IMP name="SR" type="FBLK" />
+        <IMP name="TOF" type="FBLK" />
+        <IMP name="TON" type="FBLK" />
+        <IMP name="TP" type="FBLK" />
+      </PKG>
+    </LIBRARY>
+    <POU>
+      <ITEM lang="ST" type="PRG" name="STEROWNIK" editor="CPDev.ST"><![CDATA[PROGRAM STEROWNIK
+ VAR_EXTERNAL (*$AUTO*) END_VAR
+ 
+ VAR
+   V_ORZESZKOW:real:=0.0;
+   V_CZEKOLADY:real:=0.0;
+   
+   V_sum_czekolady:real:=0.0;
+   V_sum_orzeszkow:real:=0.0;
+   V_sum_mieszalnik_out:real:=0.0;
+      
+   Q_ORZESZKOW:real:=0.0;
+   Q_CZEKOLADY:real:=0.0;
+   Q_MIESZALNIK_OUT:real:=0.0;
+                 
+   C_ORZESZKOW:real:=0.0;
+   C_CZEKOLADY:real:=0.0;
+   
+   req_C_orzeszkow:real:=0.0;
+   req_C_czekolady:real:=0.0;
+   eps_C_orzeszkow:real:=0.0;
+   eps_C_czekolady:real:=0.0;
+   eps_tol_czekolady:real;
+   eps_tol_orzeszkow:real; //dopuszczlana tolerancja 10% 
+   
+   sampleTime:real:=5.0;      (*dzielnik zeby dane tech i procesu [XXX/s] a wyswietlanie jest co 200ms*)
+   
+    silnik_ON_TON:TON;
+    silnik_OFF_TON:TON;
+              
+(*dane techniczne zbiornika*) 
+   max_volume:real:=10.0;
+   High_VOLUME:real:=8;
+   low_VOLUME:real:=2.0;
+   empty_vOLUME:real:=0.0;
+   
+ END_VAR
+(*###########################################################################*)
+(*           PROGRAM           *) 
+(*###########################################################################*)
+
+SILNIK_ON_TON(IN:= not SILNIK_OFF_TON.Q,PT:= T#3s);
+SILNIK_OFF_TON(IN:= SILNIK_ON_TON.Q,PT:= T#1s);
+ 
+if START_ALL then
+   SILNIK_DZIALA:=not SILNIK_ON_TON.Q and not V_MIESZALNIK_LOW;           (*silnik zawsze dziala 3+1 jesli START_ALL i ponad poziom LOW*)
+else    
+   SILNIK_dziala:=false;
+   ZAWORORZESZKI:=false;
+   ZAWORCZEKOLADA:=false;
+   ZAWOR_MIESZALNIK_OUT:=false;
+   V_SUM_CZEKOLADY:=0;
+   V_SUM_ORZESZKOW:=0;
+   V_SUM_MIESZALNIK_OUT:=0;      
+end_if
+
+if START_ALL then 
+(************czujniki***********
+alarmy i warningi - to dodalem ze niby mamy czujnik 
+poziomu ale dodatkowo mamy tez binarne czujki na obudowie zbiornika
+*) 
+if V_WMIESZALNIKU>= MAX_VOLUME then
+      V_MIESZALNIK_FULL:=true;
+      ZAWORORZESZKI:=false;
+      ZAWORCZEKOLADA:=false;
+else
+    V_MIESZALNIK_FULL:=false;
+end_if   
+ 
+if V_WMIESZALNIKU>= HIGH_VOLUME then
+   V_MIESZALNIK_HIGH:=true;
+else
+    V_MIESZALNIK_HIGH:=false;
+end_if
+
+if V_WMIESZALNIKU<= LOW_VOLUME then
+   V_MIESZALNIK_LOW:=true;
+else
+    V_MIESZALNIK_LOW:=false;
+end_if
+
+if V_WMIESZALNIKU<= EMPTY_VOLUME then
+   V_MIESZALNIK_EMPTY:=true;
+else
+    V_MIESZALNIK_EMPTY:=false;
+end_if
+
+(*#######   proces   #####*) 
+ (*intouch to cpdev*) 
+Q_ORZESZKOW:=int_TO_REAL(Q_ORZESZKOW_PC)/1000.0;                                          
+Q_CZEKOLADY:=int_TO_REAL(Q_CZEKOLADY_PC)/1000.0;
+Q_MIESZALNIK_OUT:=int_TO_REAL(Q_MIESZALNIK_OUT_PC)/1000.0;     
+
+(*proces*)
+if ZAWORORZESZKI then
+      V_ORZESZKOW:=V_ORZESZKOW+Q_ORZESZKOW/sampleTime;     (*aktualna V orzeszki w zbiorniku*)                          
+      V_SUM_ORZESZKOW:=V_SUM_ORZESZKOW+Q_ORZESZKOW/sampleTime;    (*czalkowiete dostarczone V orzeszki *)     
+end_if
+
+if ZAWORCZEKOLADA then
+      V_CZEKOLADY:=V_CZEKOLADY+Q_CZEKOLADY/sampleTime;        
+      V_SUM_CZEKOLADY:=V_SUM_CZEKOLADY+Q_CZEKOLADY/sampleTime;         
+end_if
+
+if NOT V_MIESZALNIK_EMPTY then 
+      C_ORZESZKOW:=V_ORZESZKOW/V_WMIESZALNIKU;         
+      C_CZEKOLADY:=V_CZEKOLADY/V_WMIESZALNIKU;         
+      else
+      C_ORZESZKOW:=0.0;       //zeby nei dzielil przez 0
+      C_CZEKOLADY:=0.0;      
+end_if
+  
+if ZAWOR_MIESZALNIK_OUT then
+          V_ORZESZKOW:=V_ORZESZKOW-(Q_MIESZALNIK_OUT/sampleTime)*C_ORZESZKOW;        
+          V_CZEKOLADY:=V_CZEKOLADY-(Q_MIESZALNIK_OUT/sampleTime)*C_CZEKOLADY;         
+          if not V_MIESZALNIK_EMPTY then
+               V_sum_mieszalnik_OUT:=V_sum_mieszalnik_OUT+Q_MIESZALNIK_OUT/sampleTime;    
+          end_if          
+end_if
+
+//autoregulacja stezenia
+EPS_TOL_ORZESZKOW:=INT_TO_REAL(EPS_TOL_ORZESZKOW_PC)/1000.0;      //z intocha
+EPS_TOL_CZEKOLADY:=INT_TO_REAL(EPS_TOL_CZEKOLADY_PC)/1000.0;      //z intocha
+REQ_C_ORZESZKOW:=INT_TO_REAL(REQ_C_ORZESZKOW_PC)/1000.0;      //z intocha
+REQ_C_CZEKOLADY:=1.0-REQ_C_ORZESZKOW;       //dopelnienie do 1 czyli 100%
+EPS_C_ORZESZKOW:=C_ORZESZKOW-REQ_C_ORZESZKOW;   
+EPS_C_CZEKOLADY:=C_CZEKOLADY-REQ_C_CZEKOLADY;   
+
+
+if AUTO_REG_C then
+if C_ORZESZKOW > REQ_C_ORZESZKOW+EPS_TOL_ORZESZKOW then  //za duzo orzeszkow   dopuszczalna =+/- 2%
+   ZAWORORZESZKI:=false;
+   C_ORZESZKOW_high:=true;
+   C_ORZESZKOW_LOW:=false;                                         
+elsif C_ORZESZKOW < REQ_C_ORZESZKOW-EPS_TOL_ORZESZKOW then    //za malo orzeszkow
+   ZAWORORZESZKI:=true;
+   C_ORZESZKOW_high:=false;
+   C_ORZESZKOW_LOW:=true;
+else 
+   ZAWORORZESZKI:=true;
+   C_ORZESZKOW_high:=false;
+   C_ORZESZKOW_LOW:=false;    
+end_if         
+
+if C_CZEKOLADY > REQ_C_CZEKOLADY+eps_tol_czekolady then  //za duzo czekolady  dop=req +/-2%
+   ZAWORCZEKOLADA:=false;
+   C_CZEKOLADY_high:=true;
+   C_CZEKOLADY_low:=false;    
+elsif C_CZEKOLADY < REQ_C_CZEKOLADY-eps_tol_czekolady then  //za duzo czekolady
+   ZAWORCZEKOLADA:=true;
+   C_CZEKOLADY_high:=false;
+   C_CZEKOLADY_low:=true;
+else
+   ZAWORCZEKOLADA:=true;
+   C_CZEKOLADY_high:=false;
+   C_CZEKOLADY_low:=false;    
+end_if
+
+if V_MIESZALNIK_HIGH then
+   ZAWOR_MIESZALNIK_OUT:=true;
+end_if
+
+if V_MIESZALNIK_LOW then
+   ZAWOR_MIESZALNIK_OUT:=false;
+end_if
+
+end_if   //koniec autoreg                                                                                                   
+ 
+//do intoucha 
+C_ORZESZKOW_PC:=REAL_TO_int(C_ORZESZKOW*1000.0);
+C_CZEKOLADY_PC:=REAL_TO_int(C_CZEKOLADY*1000.0);   
+REQ_C_CZEKOLADY_PC:=REAL_TO_int(REQ_C_CZEKOLADY*1000.0);
+  
+EPS_C_ORZESZKOW_PC:=(REAL_TO_int(EPS_C_ORZESZKOW*1000.0))+1000;
+EPS_C_CZEKOLADY_PC:=(REAL_TO_int(EPS_C_CZEKOLADY*1000.0))+1000;
+           
+V_ORZESZKOW_PC:=REAL_TO_int(V_ORZESZKOW*1000.0);
+V_CZEKOLADY_PC:=REAL_TO_int(V_CZEKOLADY*1000.0);
+V_WMIESZALNIKU_PC:=REAL_TO_int(V_WMIESZALNIKU*1000.0);
+ 
+V_SUM_CZEKOLADY_PC:=REAL_TO_int(V_SUM_CZEKOLADY*10.0);
+V_SUM_ORZESZKOW_PC:=REAL_TO_int(V_SUM_ORZESZKOW*10.0);
+V_SUM_MIESZALNIK_OUT_PC:=REAL_TO_int(V_SUM_MIESZALNIK_OUT*10.0);     
+
+end_if
+END_PROGRAM]]><EDITOR><![CDATA[]]></EDITOR></ITEM>
+      <ITEM lang="ST" type="PRG" name="SYMULATOR" editor="CPDev.ST"><![CDATA[PROGRAM SYMULATOR
+ VAR_EXTERNAL (*$AUTO*) END_VAR
+ 
+ VAR
+   Q_ORZESZKOW:real:=0.0;
+   Q_CZEKOLADY:real:=0.0;
+   Q_MIESZALNIK_OUT:real:=0.0;
+
+   sampleTime:real:=5.0;      (*dzielnik zeby bo co 1s a wyswietlanie co 200ms*)
+   
+END_VAR
+(*intouch to cpdev*) 
+Q_ORZESZKOW:=int_TO_REAL(Q_ORZESZKOW_PC)/1000.0;                                          
+Q_CZEKOLADY:=int_TO_REAL(Q_CZEKOLADY_PC)/1000.0;                                                                                                                        
+Q_MIESZALNIK_OUT:=int_TO_REAL(Q_MIESZALNIK_OUT_PC)/1000.0;   
+
+(*proces*) 
+if ZAWORORZESZKI then
+      V_WMIESZALNIKU:=V_WMIESZALNIKU+Q_ORZESZKOW/sampleTime;    
+end_if
+
+if ZAWORCZEKOLADA then
+      V_WMIESZALNIKU:=V_WMIESZALNIKU+Q_CZEKOLADY/sampleTime;    
+end_if
+
+if ZAWOR_MIESZALNIK_OUT then
+      V_WMIESZALNIKU:=V_WMIESZALNIKU-(Q_MIESZALNIK_OUT/sampleTime);  
+      if V_WMIESZALNIKU<=0.0 then
+         V_WMIESZALNIKU:=0.0;    
+         end_if      
+end_if
+
+V_WMIESZALNIKU_PC:=REAL_TO_int(V_WMIESZALNIKU*1000.0);
+
+END_PROGRAM]]><EDITOR><![CDATA[]]></EDITOR></ITEM>
+    </POU>
+    <GLOBAL>
+      <ITEM type="VAR" name="V_MIESZALNIK_HIGH" flags="00004000"><![CDATA[VAR_GLOBAL 
+ V_MIESZALNIK_HIGH  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="Q_ORZESZKOW_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ Q_ORZESZKOW_PC  : INT := 100;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="Q_CZEKOLADY_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ Q_CZEKOLADY_PC  : INT := 250;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="ZAWORORZESZKI" flags="00004000"><![CDATA[VAR_GLOBAL 
+ ZAWORORZESZKI  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="ZAWORCZEKOLADA" flags="00004000"><![CDATA[VAR_GLOBAL 
+ ZAWORCZEKOLADA  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="V_WMIESZALNIKU_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ V_WMIESZALNIKU_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="SILNIK_DZIALA" flags="00004000"><![CDATA[VAR_GLOBAL 
+ SILNIK_DZIALA  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="V_MIESZALNIK_LOW" flags="00004000"><![CDATA[VAR_GLOBAL 
+ V_MIESZALNIK_LOW  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="V_MIESZALNIK_FULL" flags="00004000"><![CDATA[VAR_GLOBAL 
+ V_MIESZALNIK_FULL  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="V_MIESZALNIK_EMPTY" flags="00004000"><![CDATA[VAR_GLOBAL 
+ V_MIESZALNIK_EMPTY  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="ZAWOR_MIESZALNIK_OUT" flags="00004000"><![CDATA[VAR_GLOBAL 
+ ZAWOR_MIESZALNIK_OUT  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="Q_MIESZALNIK_OUT_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ Q_MIESZALNIK_OUT_PC  : INT := 1000;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="START_ALL" flags="00004000"><![CDATA[VAR_GLOBAL 
+ START_ALL  : BOOL := TRUE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="ZZZ1" flags="00004000"><![CDATA[VAR_GLOBAL 
+ ZZZ1  : BOOL;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="V_SUM_CZEKOLADY_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ V_SUM_CZEKOLADY_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="V_SUM_ORZESZKOW_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ V_SUM_ORZESZKOW_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="V_SUM_MIESZALNIK_OUT_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ V_SUM_MIESZALNIK_OUT_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="C_ORZESZKOW_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ C_ORZESZKOW_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="C_CZEKOLADY_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ C_CZEKOLADY_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="REQ_C_ORZESZKOW_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ REQ_C_ORZESZKOW_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="REQ_C_CZEKOLADY_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ REQ_C_CZEKOLADY_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="C_ORZESZKOW_HIGH" flags="00004000"><![CDATA[VAR_GLOBAL 
+ C_ORZESZKOW_HIGH  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="C_ORZESZKOW_LOW" flags="00004000"><![CDATA[VAR_GLOBAL 
+ C_ORZESZKOW_LOW  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="C_CZEKOLADY_HIGH" flags="00004000"><![CDATA[VAR_GLOBAL 
+ C_CZEKOLADY_HIGH  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="C_CZEKOLADY_LOW" flags="00004000"><![CDATA[VAR_GLOBAL 
+ C_CZEKOLADY_LOW  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="EPS_C_ORZESZKOW_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ EPS_C_ORZESZKOW_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="EPS_C_CZEKOLADY_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ EPS_C_CZEKOLADY_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="AUTO_REG_C" flags="00004000"><![CDATA[VAR_GLOBAL 
+ AUTO_REG_C  : BOOL := FALSE;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="V_ORZESZKOW_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ V_ORZESZKOW_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="V_CZEKOLADY_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ V_CZEKOLADY_PC  : INT := 0;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="EPS_TOL_CZEKOLADY_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ EPS_TOL_CZEKOLADY_PC  : INT := 20;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="EPS_TOL_ORZESZKOW_PC" flags="00004000"><![CDATA[VAR_GLOBAL 
+ EPS_TOL_ORZESZKOW_PC  : INT := 20;
+END_VAR]]></ITEM>
+      <ITEM type="VAR" name="V_WMIESZALNIKU" flags="00004000"><![CDATA[VAR_GLOBAL 
+ V_WMIESZALNIKU  : REAL := 0.0;
+END_VAR]]></ITEM>
+    </GLOBAL>
+    <TASK>
+      <ITEM type="TSK" name="Fabryka" loop_kind="0" interval="200"><![CDATA[STEROWNIK
+SYMULATOR
+]]></ITEM>
+    </TASK>
+  </PROJECT>
+</CPDEV>

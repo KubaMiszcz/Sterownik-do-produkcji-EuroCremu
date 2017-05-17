@@ -1,0 +1,80 @@
+PROGRAM STEROWANIE
+VAR_EXTERNAL (*$AUTO*)
+END_VAR
+VAR
+    DirUp: BOOL;                      (* Nape³nianie / Opró¿nianie            *)
+END_VAR
+
+(* Program sterowania zbiornikiem *)
+IF AUTO THEN
+   IF START AND NOT ALM THEN
+      IF NOT H1 OR DirUp THEN
+         Z1 := TRUE;
+         Z3 := FALSE;
+         DirUp := TRUE;
+      END_IF
+      IF H3 OR NOT DirUp THEN
+         Z1 := FALSE;
+         Z3 := TRUE;
+         DirUp := FALSE;
+      END_IF
+   ELSE
+       Z1 := FALSE;
+       Z2 := FALSE;
+       Z3 := FALSE;
+       IF ALM THEN
+          AUTO := FALSE;
+       END_IF
+   END_IF
+END_IF
+
+END_PROGRAM
+
+
+PROGRAM SYMULACJA
+VAR_EXTERNAL (*$AUTO*)
+END_VAR
+VAR
+    ZB1 : ZBIORNIK;                   (* Instancja obiektu sterowania         *)
+    q1  : REAL;                       (* Dop³yw 1 cieczy do zbiornika [m3/s]  *)
+    q2  : REAL;                       (* Dop³yw 2 cieczy do zbiornika [m3/s]  *)
+    q3  : REAL;                       (* Odp³yw cieczy ze zbiornika [m3/s]    *)
+    Szb : REAL := 0.250;              (* Powierzchnia zbiornika [m2]          *)
+    Szw : REAL;                       (* Powierzchnia czynna zaworu Z3 [m2]   *)
+    H   : REAL;                       (* Wysokoœæ s³upa cieczy [m]            *)
+    Hmax: REAL := 1.0;                (* Wysokoœæ zbiornika [m]               *)
+END_VAR
+
+(* Symulacja nape³niania/opró¿niania zbiornika z ciecz¹ *)
+IF Z1 THEN                               (* Jeœli otwarty zawór Z1            *)
+    IF vZ1>1000 THEN vZ1 := 1000; END_IF (* Maksymalne otwarcie zaworu Z1     *)
+    IF vZ1<0 THEN vZ1 := 0; END_IF       (* Minimalne otwarcie zaworu Z1      *)
+    q1:=0.007*INT_TO_REAL(vZ1)/1000.0;   (* Dop³yw cieczy przez Z1 [m3/s]     *)
+ELSE
+    q1:=0.0;                             (* Dop³yw q1 zablokowany             *)
+END_IF
+IF Z2 THEN                               (* Jeœli otwarty zawór Z2            *)
+    IF vZ2>1000 THEN vZ2 := 1000; END_IF (* Maksymalne otwarcie zaworu Z2     *)
+    IF vZ2<0 THEN vZ2 := 0; END_IF       (* Minimalne otwarcie zaworu Z2      *)
+    q2:=0.006*INT_TO_REAL(vZ2)/1000.0;   (* Dop³yw cieczy przez Z2 [m3/s]     *)
+ELSE
+    q2:=0.0;                             (* Dop³yw q2 zablokowany             *)
+END_IF
+IF Z3 THEN                               (* Jeœli otwarty zawór Z3            *)
+    IF vZ3>1000 THEN vZ3 := 1000; END_IF (* Maksymalne otwarcie zaworu Z3     *)
+    IF vZ3<0 THEN vZ3 := 0; END_IF       (* Minimalne otwarcie zaworu Z3      *)
+    Szw:=0.0012*INT_TO_REAL(vZ3)/1000.0; (* Powierzchnia czynna zaworu Z3     *)
+ELSE
+    Szw:=0.0;                            (* Odp³yw zablokowany                *)
+END_IF
+
+ZB1(qin1:=q1, qin2:=q2, Szw:=Szw, Hmax:=Hmax, MulTc:=1.0); (* Zbiornik 1      *)
+q3 := ZB1.qout;                       (* Odp³yw cieczy ze zbiornika [m3/s]    *)
+H := ZB1.h;                           (* Poziom cieczy w zbiorniku            *)
+vH:= REAL_TO_INT(1000.0*H/Hmax);      (* Wyjœcie analogowe poziomu H [0..1000]*)
+H1 := (H>0.1*Hmax);                   (* Czujnik dwustanowy H1 poziomu cieczy *)
+H2 := (H>0.5*Hmax);                   (* Czujnik dwustanowy H2 poziomu cieczy *)
+H3 := (H>0.9*Hmax);                   (* Czujnik dwustanowy H3 poziomu cieczy *)
+ALM:= (ZB1.STA > BYTE#0);             (* Alarm, jeœli przepe³niony zbiornik   *)
+
+END_PROGRAM

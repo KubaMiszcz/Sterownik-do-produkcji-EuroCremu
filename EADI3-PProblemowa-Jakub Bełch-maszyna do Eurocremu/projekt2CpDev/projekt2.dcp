@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CPDEV version="1.0">
+  <TARGET>
+    <GLOBAL>
+      <VAR LName="V_MIESZALNIK_HIGH" PName="projekt2.V_MIESZALNIK_HIGH" Addr="0000" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="Q_ORZESZKOW_PC" PName="projekt2.Q_ORZESZKOW_PC" Addr="0002" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="Q_CZEKOLADY_PC" PName="projekt2.Q_CZEKOLADY_PC" Addr="0004" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="ZAWORORZESZKI" PName="projekt2.ZAWORORZESZKI" Addr="0001" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="ZAWORCZEKOLADA" PName="projekt2.ZAWORCZEKOLADA" Addr="0006" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="V_WMIESZALNIKU_PC" PName="projekt2.V_WMIESZALNIKU_PC" Addr="0008" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="SILNIK_DZIALA" PName="projekt2.SILNIK_DZIALA" Addr="0007" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="V_MIESZALNIK_LOW" PName="projekt2.V_MIESZALNIK_LOW" Addr="000a" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="V_MIESZALNIK_FULL" PName="projekt2.V_MIESZALNIK_FULL" Addr="000b" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="V_MIESZALNIK_EMPTY" PName="projekt2.V_MIESZALNIK_EMPTY" Addr="000c" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="ZAWOR_MIESZALNIK_OUT" PName="projekt2.ZAWOR_MIESZALNIK_OUT" Addr="000d" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="Q_MIESZALNIK_OUT_PC" PName="projekt2.Q_MIESZALNIK_OUT_PC" Addr="000e" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="START_ALL" PName="projekt2.START_ALL" Addr="0010" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="ZZZ1" PName="projekt2.ZZZ1" Addr="0011" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="V_SUM_CZEKOLADY_PC" PName="projekt2.V_SUM_CZEKOLADY_PC" Addr="0012" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="V_SUM_ORZESZKOW_PC" PName="projekt2.V_SUM_ORZESZKOW_PC" Addr="0014" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="V_SUM_MIESZALNIK_OUT_PC" PName="projekt2.V_SUM_MIESZALNIK_OUT_PC" Addr="0016" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="C_ORZESZKOW_PC" PName="projekt2.C_ORZESZKOW_PC" Addr="0018" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="C_CZEKOLADY_PC" PName="projekt2.C_CZEKOLADY_PC" Addr="001a" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="REQ_C_ORZESZKOW_PC" PName="projekt2.REQ_C_ORZESZKOW_PC" Addr="001c" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="REQ_C_CZEKOLADY_PC" PName="projekt2.REQ_C_CZEKOLADY_PC" Addr="001e" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="C_ORZESZKOW_HIGH" PName="projekt2.C_ORZESZKOW_HIGH" Addr="0020" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="C_ORZESZKOW_LOW" PName="projekt2.C_ORZESZKOW_LOW" Addr="0021" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="C_CZEKOLADY_HIGH" PName="projekt2.C_CZEKOLADY_HIGH" Addr="0022" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="C_CZEKOLADY_LOW" PName="projekt2.C_CZEKOLADY_LOW" Addr="0023" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="EPS_C_ORZESZKOW_PC" PName="projekt2.EPS_C_ORZESZKOW_PC" Addr="0024" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="EPS_C_CZEKOLADY_PC" PName="projekt2.EPS_C_CZEKOLADY_PC" Addr="0026" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="AUTO_REG_C" PName="projekt2.AUTO_REG_C" Addr="0028" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" VarFlags="00004000" />
+      <VAR LName="V_ORZESZKOW_PC" PName="projekt2.V_ORZESZKOW_PC" Addr="002a" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="V_CZEKOLADY_PC" PName="projekt2.V_CZEKOLADY_PC" Addr="002c" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="EPS_TOL_CZEKOLADY_PC" PName="projekt2.EPS_TOL_CZEKOLADY_PC" Addr="002e" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="EPS_TOL_ORZESZKOW_PC" PName="projekt2.EPS_TOL_ORZESZKOW_PC" Addr="0030" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" VarFlags="00004000" />
+      <VAR LName="V_WMIESZALNIKU" PName="projekt2.V_WMIESZALNIKU" Addr="0034" AdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" VarFlags="00004000" />
+    </GLOBAL>
+    <VMACH>
+      <FILE_LOC>C:\Program Files\CPDevFBD\VM\VM-SMC.xml</FILE_LOC>
+    </VMACH>
+    <TASKS>
+      <TASK LName="Fabryka" PName="projekt2.Fabryka" LoopType="0" Cycle="200" CycleUnit="ms" BodyCodeAddres="00E6" TaskFlags="00000000" />
+    </TASKS>
+    <MEMORY_MAP Type="code">
+      <file LoadAddr="0" Size="1808">projekt2.xcp</file>
+    </MEMORY_MAP>
+    <MEMORY_MAP Type="data">
+      <file LoadAddr="0" Size="384">#dummy</file>
+    </MEMORY_MAP>
+    <MNEMONIC_MAP Type="code">
+:0000| 1C15 0000 01 00                   | $VMSYS.MCD projekt2.V_MIESZALNIK_HIGH, #01, #00                                 
+:0006| 1C15 0200 02 6400                 | $VMSYS.MCD projekt2.Q_ORZESZKOW_PC, #02, #6400                                  
+:000d| 1C15 0400 02 FA00                 | $VMSYS.MCD projekt2.Q_CZEKOLADY_PC, #02, #FA00                                  
+:0014| 1C15 0100 01 00                   | $VMSYS.MCD projekt2.ZAWORORZESZKI, #01, #00                                     
+:001a| 1C15 0600 01 00                   | $VMSYS.MCD projekt2.ZAWORCZEKOLADA, #01, #00                                    
+:0020| 1C15 0800 02 0000                 | $VMSYS.MCD projekt2.V_WMIESZALNIKU_PC, #02, #0000                               
+:0027| 1C15 0700 01 00                   | $VMSYS.MCD projekt2.SILNIK_DZIALA, #01, #00                                     
+:002d| 1C15 0A00 01 00                   | $VMSYS.MCD projekt2.V_MIESZALNIK_LOW, #01, #00                                  
+:0033| 1C15 0B00 01 00                   | $VMSYS.MCD projekt2.V_MIESZALNIK_FULL, #01, #00                                 
+:0039| 1C15 0C00 01 00                   | $VMSYS.MCD projekt2.V_MIESZALNIK_EMPTY, #01, #00                                
+:003f| 1C15 0D00 01 00                   | $VMSYS.MCD projekt2.ZAWOR_MIESZALNIK_OUT, #01, #00                              
+:0045| 1C15 0E00 02 E803                 | $VMSYS.MCD projekt2.Q_MIESZALNIK_OUT_PC, #02, #E803                             
+:004c| 1C15 1000 01 01                   | $VMSYS.MCD projekt2.START_ALL, #01, #01                                         
+:0052| 1C15 1100 01 00                   | $VMSYS.MCD projekt2.ZZZ1, #01, #00                                              
+:0058| 1C15 1200 02 0000                 | $VMSYS.MCD projekt2.V_SUM_CZEKOLADY_PC, #02, #0000                              
+:005f| 1C15 1400 02 0000                 | $VMSYS.MCD projekt2.V_SUM_ORZESZKOW_PC, #02, #0000                              
+:0066| 1C15 1600 02 0000                 | $VMSYS.MCD projekt2.V_SUM_MIESZALNIK_OUT_PC, #02, #0000                         
+:006d| 1C15 1800 02 0000                 | $VMSYS.MCD projekt2.C_ORZESZKOW_PC, #02, #0000                                  
+:0074| 1C15 1A00 02 0000                 | $VMSYS.MCD projekt2.C_CZEKOLADY_PC, #02, #0000                                  
+:007b| 1C15 1C00 02 0000                 | $VMSYS.MCD projekt2.REQ_C_ORZESZKOW_PC, #02, #0000                              
+:0082| 1C15 1E00 02 0000                 | $VMSYS.MCD projekt2.REQ_C_CZEKOLADY_PC, #02, #0000                              
+:0089| 1C15 2000 01 00                   | $VMSYS.MCD projekt2.C_ORZESZKOW_HIGH, #01, #00                                  
+:008f| 1C15 2100 01 00                   | $VMSYS.MCD projekt2.C_ORZESZKOW_LOW, #01, #00                                   
+:0095| 1C15 2200 01 00                   | $VMSYS.MCD projekt2.C_CZEKOLADY_HIGH, #01, #00                                  
+:009b| 1C15 2300 01 00                   | $VMSYS.MCD projekt2.C_CZEKOLADY_LOW, #01, #00                                   
+:00a1| 1C15 2400 02 0000                 | $VMSYS.MCD projekt2.EPS_C_ORZESZKOW_PC, #02, #0000                              
+:00a8| 1C15 2600 02 0000                 | $VMSYS.MCD projekt2.EPS_C_CZEKOLADY_PC, #02, #0000                              
+:00af| 1C15 2800 01 00                   | $VMSYS.MCD projekt2.AUTO_REG_C, #01, #00                                        
+:00b5| 1C15 2A00 02 0000                 | $VMSYS.MCD projekt2.V_ORZESZKOW_PC, #02, #0000                                  
+:00bc| 1C15 2C00 02 0000                 | $VMSYS.MCD projekt2.V_CZEKOLADY_PC, #02, #0000                                  
+:00c3| 1C15 2E00 02 1400                 | $VMSYS.MCD projekt2.EPS_TOL_CZEKOLADY_PC, #02, #1400                            
+:00ca| 1C15 3000 02 1400                 | $VMSYS.MCD projekt2.EPS_TOL_ORZESZKOW_PC, #02, #1400                            
+:00d1| 1C15 3400 04 00000000             | $VMSYS.MCD projekt2.V_WMIESZALNIKU, #04, #00000000                              
+:00da|                                   | :?projekt2.Fabryka?TSKSTR                                                       
+:00da| 1C16 0000 6901                    | $VMSYS.CALB #0000, :?projekt2.STEROWNIK?INIT                                    
+:00e0| 1C16 0000 4506                    | $VMSYS.CALB #0000, :?projekt2.SYMULATOR?INIT                                    
+:00e6|                                   | :?projekt2.Fabryka?TSKLOOP                                                      
+:00e6| 1C16 0000 5602                    | $VMSYS.CALB #0000, :?projekt2.STEROWNIK?CODE                                    
+:00ec| 1C16 0000 7D06                    | $VMSYS.CALB #0000, :?projekt2.SYMULATOR?CODE                                    
+:00f2| 1C1D E600                         | $VMSYS.TRML :?projekt2.Fabryka?TSKLOOP                                          
+:00f6|                                   | :?IEC_61131.TON?INIT                                                            
+:00f6| 1C15 0C00 04 00000000             | $VMSYS.MCD STIME, #04, #00000000                                                
+:00ff| 1C15 0100 01 00                   | $VMSYS.MCD Q, #01, #00                                                          
+:0105| 1C15 0800 04 00000000             | $VMSYS.MCD ET, #04, #00000000                                                   
+:010e| 1C13                              | $VMSYS.RETURN                                                                   
+:0110|                                   | :?IEC_61131.TON?CODE                                                            
+:0110| 0510 0200 0000                    | $DEFAULT.NOT ?IF?B0074, IN                                                      
+:0116| 1C02 0200 3301                    | $VMSYS.JZ ?IF?B0074, :?IEC_61131.TONIF?B0075                                    
+:011c| 1C15 0100 01 00                   | $VMSYS.MCD Q, #01, #00                                                          
+:0122| 1C15 0800 04 00000000             | $VMSYS.MCD ET, #04, #00000000                                                   
+:012b| 1C17 0C00                         | $DEFAULT.CUR_TIME STIME                                                         
+:012f| 1C00 6701                         | $VMSYS.JMP :?IEC_61131.TONIF?E0078                                              
+:0133|                                   | :?IEC_61131.TONIF?B0075                                                         
+:0133| 0510 0300 0100                    | $DEFAULT.NOT ?IF?B0079, Q                                                       
+:0139| 1C02 0300 6701                    | $VMSYS.JZ ?IF?B0079, :?IEC_61131.TONIF?B007A                                    
+:013f| 1C17 1000                         | $DEFAULT.CUR_TIME ?F?CUR_TIME007C                                               
+:0143| 020B 0800 1000 0C00               | $DEFAULT.SUB ET, ?F?CUR_TIME007C, STIME                                         
+:014b| 110B 1400 0800 0400               | $DEFAULT.GE ?IF?B007E, ET, PT                                                   
+:0153| 1C02 1400 6701                    | $VMSYS.JZ ?IF?B007E, :?IEC_61131.TONIF?B007F                                    
+:0159| 1C15 0100 01 01                   | $VMSYS.MCD Q, #01, #01                                                          
+:015f| 1C1F 0800 0400 0400               | $VMSYS.MEMCP ET, PT, #0400                                                      
+:0167|                                   | :?IEC_61131.TONIF?B007F                                                         
+:0167|                                   | :?IEC_61131.TONIF?B007A                                                         
+:0167|                                   | :?IEC_61131.TONIF?E0078                                                         
+:0167| 1C13                              | $VMSYS.RETURN                                                                   
+:0169|                                   | :?projekt2.STEROWNIK?INIT                                                       
+:0169| 1C16 9800 F600                    | $VMSYS.CALB SILNIK_OFF_TON, :?IEC_61131.TON?INIT                                
+:016f| 1C16 8000 F600                    | $VMSYS.CALB SILNIK_ON_TON, :?IEC_61131.TON?INIT                                 
+:0175| 1C15 3800 04 00000000             | $VMSYS.MCD V_ORZESZKOW, #04, #00000000                                          
+:017e| 1C15 3C00 04 00000000             | $VMSYS.MCD V_CZEKOLADY, #04, #00000000                                          
+:0187| 1C15 4000 04 00000000             | $VMSYS.MCD V_SUM_CZEKOLADY, #04, #00000000                                      
+:0190| 1C15 4400 04 00000000             | $VMSYS.MCD V_SUM_ORZESZKOW, #04, #00000000                                      
+:0199| 1C15 4800 04 00000000             | $VMSYS.MCD V_SUM_MIESZALNIK_OUT, #04, #00000000                                 
+:01a2| 1C15 4C00 04 00000000             | $VMSYS.MCD Q_ORZESZKOW, #04, #00000000                                          
+:01ab| 1C15 5000 04 00000000             | $VMSYS.MCD Q_CZEKOLADY, #04, #00000000                                          
+:01b4| 1C15 5400 04 00000000             | $VMSYS.MCD Q_MIESZALNIK_OUT, #04, #00000000                                     
+:01bd| 1C15 5800 04 00000000             | $VMSYS.MCD C_ORZESZKOW, #04, #00000000                                          
+:01c6| 1C15 5C00 04 00000000             | $VMSYS.MCD C_CZEKOLADY, #04, #00000000                                          
+:01cf| 1C15 6000 04 00000000             | $VMSYS.MCD REQ_C_ORZESZKOW, #04, #00000000                                      
+:01d8| 1C15 6400 04 00000000             | $VMSYS.MCD REQ_C_CZEKOLADY, #04, #00000000                                      
+:01e1| 1C15 6800 04 00000000             | $VMSYS.MCD EPS_C_ORZESZKOW, #04, #00000000                                      
+:01ea| 1C15 6C00 04 00000000             | $VMSYS.MCD EPS_C_CZEKOLADY, #04, #00000000                                      
+:01f3| 1C15 7000 04 00000000             | $VMSYS.MCD EPS_TOL_CZEKOLADY, #04, #00000000                                    
+:01fc| 1C15 7400 04 00000000             | $VMSYS.MCD EPS_TOL_ORZESZKOW, #04, #00000000                                    
+:0205| 1C15 7800 04 0000A040             | $VMSYS.MCD SAMPLETIME, #04, #0000A040                                           
+:020e| 1C15 7C00 04 00002041             | $VMSYS.MCD MAX_VOLUME, #04, #00002041                                           
+:0217| 1C15 B000 04 00000041             | $VMSYS.MCD HIGH_VOLUME, #04, #00000041                                          
+:0220| 1C15 B400 04 00000040             | $VMSYS.MCD LOW_VOLUME, #04, #00000040                                           
+:0229| 1C15 B800 04 00000000             | $VMSYS.MCD EMPTY_VOLUME, #04, #00000000                                         
+:0232| 1C15 BC00 04 00007A44             | $VMSYS.MCD ?L?CST07BB, #04, #00007A44                                           
+:023b| 1C15 FC00 04 0000803F             | $VMSYS.MCD ?L?CST07E7, #04, #0000803F                                           
+:0244| 1C15 2001 02 E803                 | $VMSYS.MCD ?L?CST0809, #02, #E803                                               
+:024b| 1C15 3C01 04 00002041             | $VMSYS.MCD ?L?CST0816, #04, #00002041                                           
+:0254| 1C13                              | $VMSYS.RETURN                                                                   
+:0256|                                   | :?projekt2.STEROWNIK?CODE                                                       
+:0256| 0510 8000 9900                    | $DEFAULT.NOT SILNIK_ON_TON.IN, SILNIK_OFF_TON.Q                                 
+:025c| 1C15 8400 04 B80B0000             | $VMSYS.MCD SILNIK_ON_TON.PT, #04, #B80B0000                                     
+:0265| 1C16 8000 1001                    | $VMSYS.CALB SILNIK_ON_TON, :?IEC_61131.TON?CODE                                 
+:026b| 1C1F 9800 8100 0100               | $VMSYS.MEMCP SILNIK_OFF_TON.IN, SILNIK_ON_TON.Q, #0100                          
+:0273| 1C15 9C00 04 E8030000             | $VMSYS.MCD SILNIK_OFF_TON.PT, #04, #E8030000                                    
+:027c| 1C16 9800 1001                    | $VMSYS.CALB SILNIK_OFF_TON, :?IEC_61131.TON?CODE                                
+:0282| 1C02 1000 B402                    | $VMSYS.JZ START_ALL, :?projekt2.STEROWNIKIF?B07A2                               
+:0288| 0510 2900 8100                    | $DEFAULT.NOT ?LR?AND07A4, SILNIK_ON_TON.Q                                       
+:028e| 1C02 2900 AA02                    | $VMSYS.JZ ?LR?AND07A4, :?projekt2.STEROWNIK?AND07A3                             
+:0294| 0510 3200 0A00                    | $DEFAULT.NOT ?LR?AND07A6, V_MIESZALNIK_LOW                                      
+:029a| 1C02 3200 AA02                    | $VMSYS.JZ ?LR?AND07A6, :?projekt2.STEROWNIK?AND07A3                             
+:02a0| 1C15 0700 01 01                   | $VMSYS.MCD SILNIK_DZIALA, #01, #01                                              
+:02a6| 1C00 B002                         | $VMSYS.JMP :?projekt2.STEROWNIK?EAND07A9                                        
+:02aa|                                   | :?projekt2.STEROWNIK?AND07A3                                                    
+:02aa| 1C15 0700 01 00                   | $VMSYS.MCD SILNIK_DZIALA, #01, #00                                              
+:02b0|                                   | :?projekt2.STEROWNIK?EAND07A9                                                   
+:02b0| 1C00 E702                         | $VMSYS.JMP :?projekt2.STEROWNIKIF?E07AA                                         
+:02b4|                                   | :?projekt2.STEROWNIKIF?B07A2                                                    
+:02b4| 1C15 0700 01 00                   | $VMSYS.MCD SILNIK_DZIALA, #01, #00                                              
+:02ba| 1C15 0100 01 00                   | $VMSYS.MCD ZAWORORZESZKI, #01, #00                                              
+:02c0| 1C15 0600 01 00                   | $VMSYS.MCD ZAWORCZEKOLADA, #01, #00                                             
+:02c6| 1C15 0D00 01 00                   | $VMSYS.MCD ZAWOR_MIESZALNIK_OUT, #01, #00                                       
+:02cc| 1C15 4000 04 00000000             | $VMSYS.MCD V_SUM_CZEKOLADY, #04, #00000000                                      
+:02d5| 1C15 4400 04 00000000             | $VMSYS.MCD V_SUM_ORZESZKOW, #04, #00000000                                      
+:02de| 1C15 4800 04 00000000             | $VMSYS.MCD V_SUM_MIESZALNIK_OUT, #04, #00000000                                 
+:02e7|                                   | :?projekt2.STEROWNIKIF?E07AA                                                    
+:02e7| 1109 3300 3400 7C00               | $DEFAULT.GE ?IF?B07AB, V_WMIESZALNIKU, MAX_VOLUME                               
+:02ef| 1C02 3300 0B03                    | $VMSYS.JZ ?IF?B07AB, :?projekt2.STEROWNIKIF?B07AC                               
+:02f5| 1C15 0B00 01 01                   | $VMSYS.MCD V_MIESZALNIK_FULL, #01, #01                                          
+:02fb| 1C15 0100 01 00                   | $VMSYS.MCD ZAWORORZESZKI, #01, #00                                              
+:0301| 1C15 0600 01 00                   | $VMSYS.MCD ZAWORCZEKOLADA, #01, #00                                             
+:0307| 1C00 1103                         | $VMSYS.JMP :?projekt2.STEROWNIKIF?E07AE                                         
+:030b|                                   | :?projekt2.STEROWNIKIF?B07AC                                                    
+:030b| 1C15 0B00 01 00                   | $VMSYS.MCD V_MIESZALNIK_FULL, #01, #00                                          
+:0311|                                   | :?projekt2.STEROWNIKIF?E07AE                                                    
+:0311| 1109 9500 3400 B000               | $DEFAULT.GE ?IF?B07AF, V_WMIESZALNIKU, HIGH_VOLUME                              
+:0319| 1C02 9500 2903                    | $VMSYS.JZ ?IF?B07AF, :?projekt2.STEROWNIKIF?B07B0                               
+:031f| 1C15 0000 01 01                   | $VMSYS.MCD V_MIESZALNIK_HIGH, #01, #01                                          
+:0325| 1C00 2F03                         | $VMSYS.JMP :?projekt2.STEROWNIKIF?E07B2                                         
+:0329|                                   | :?projekt2.STEROWNIKIF?B07B0                                                    
+:0329| 1C15 0000 01 00                   | $VMSYS.MCD V_MIESZALNIK_HIGH, #01, #00                                          
+:032f|                                   | :?projekt2.STEROWNIKIF?E07B2                                                    
+:032f| 1309 9600 3400 B400               | $DEFAULT.LE ?IF?B07B3, V_WMIESZALNIKU, LOW_VOLUME                               
+:0337| 1C02 9600 4703                    | $VMSYS.JZ ?IF?B07B3, :?projekt2.STEROWNIKIF?B07B4                               
+:033d| 1C15 0A00 01 01                   | $VMSYS.MCD V_MIESZALNIK_LOW, #01, #01                                           
+:0343| 1C00 4D03                         | $VMSYS.JMP :?projekt2.STEROWNIKIF?E07B6                                         
+:0347|                                   | :?projekt2.STEROWNIKIF?B07B4                                                    
+:0347| 1C15 0A00 01 00                   | $VMSYS.MCD V_MIESZALNIK_LOW, #01, #00                                           
+:034d|                                   | :?projekt2.STEROWNIKIF?E07B6                                                    
+:034d| 1309 9700 3400 B800               | $DEFAULT.LE ?IF?B07B7, V_WMIESZALNIKU, EMPTY_VOLUME                             
+:0355| 1C02 9700 6503                    | $VMSYS.JZ ?IF?B07B7, :?projekt2.STEROWNIKIF?B07B8                               
+:035b| 1C15 0C00 01 01                   | $VMSYS.MCD V_MIESZALNIK_EMPTY, #01, #01                                         
+:0361| 1C00 6B03                         | $VMSYS.JMP :?projekt2.STEROWNIKIF?E07BA                                         
+:0365|                                   | :?projekt2.STEROWNIKIF?B07B8                                                    
+:0365| 1C15 0C00 01 00                   | $VMSYS.MCD V_MIESZALNIK_EMPTY, #01, #00                                         
+:036b|                                   | :?projekt2.STEROWNIKIF?E07BA                                                    
+:036b| 1900 C000 0200                    | $DEFAULT.INT_TO_REAL ?F?INT_TO_REAL07BC, Q_ORZESZKOW_PC                         
+:0371| 0409 4C00 C000 BC00               | $DEFAULT.DIV Q_ORZESZKOW, ?F?INT_TO_REAL07BC, ?L?CST07BB                        
+:0379| 1900 C400 0400                    | $DEFAULT.INT_TO_REAL ?F?INT_TO_REAL07BE, Q_CZEKOLADY_PC                         
+:037f| 0409 5000 C400 BC00               | $DEFAULT.DIV Q_CZEKOLADY, ?F?INT_TO_REAL07BE, ?L?CST07BB                        
+:0387| 1900 C800 0E00                    | $DEFAULT.INT_TO_REAL ?F?INT_TO_REAL07C0, Q_MIESZALNIK_OUT_PC                    
+:038d| 0409 5400 C800 BC00               | $DEFAULT.DIV Q_MIESZALNIK_OUT, ?F?INT_TO_REAL07C0, ?L?CST07BB                   
+:0395| 1C02 0100 BB03                    | $VMSYS.JZ ZAWORORZESZKI, :?projekt2.STEROWNIKIF?B07C3                           
+:039b| 0409 CC00 4C00 7800               | $DEFAULT.DIV ?F?$DEFAULT_DIV07C4, Q_ORZESZKOW, SAMPLETIME                       
+:03a3| 0129 3800 3800 CC00               | $DEFAULT.ADD V_ORZESZKOW, V_ORZESZKOW, ?F?$DEFAULT_DIV07C4                      
+:03ab| 0409 D000 4C00 7800               | $DEFAULT.DIV ?F?$DEFAULT_DIV07C6, Q_ORZESZKOW, SAMPLETIME                       
+:03b3| 0129 4400 4400 D000               | $DEFAULT.ADD V_SUM_ORZESZKOW, V_SUM_ORZESZKOW, ?F?$DEFAULT_DIV07C6              
+:03bb|                                   | :?projekt2.STEROWNIKIF?B07C3                                                    
+:03bb| 1C02 0600 E103                    | $VMSYS.JZ ZAWORCZEKOLADA, :?projekt2.STEROWNIKIF?B07C9                          
+:03c1| 0409 D400 5000 7800               | $DEFAULT.DIV ?F?$DEFAULT_DIV07CA, Q_CZEKOLADY, SAMPLETIME                       
+:03c9| 0129 3C00 3C00 D400               | $DEFAULT.ADD V_CZEKOLADY, V_CZEKOLADY, ?F?$DEFAULT_DIV07CA                      
+:03d1| 0409 D800 5000 7800               | $DEFAULT.DIV ?F?$DEFAULT_DIV07CC, Q_CZEKOLADY, SAMPLETIME                       
+:03d9| 0129 4000 4000 D800               | $DEFAULT.ADD V_SUM_CZEKOLADY, V_SUM_CZEKOLADY, ?F?$DEFAULT_DIV07CC              
+:03e1|                                   | :?projekt2.STEROWNIKIF?B07C9                                                    
+:03e1| 0510 AD00 0C00                    | $DEFAULT.NOT ?IF?B07CE, V_MIESZALNIK_EMPTY                                      
+:03e7| 1C02 AD00 0104                    | $VMSYS.JZ ?IF?B07CE, :?projekt2.STEROWNIKIF?B07CF                               
+:03ed| 0409 5800 3800 3400               | $DEFAULT.DIV C_ORZESZKOW, V_ORZESZKOW, V_WMIESZALNIKU                           
+:03f5| 0409 5C00 3C00 3400               | $DEFAULT.DIV C_CZEKOLADY, V_CZEKOLADY, V_WMIESZALNIKU                           
+:03fd| 1C00 1304                         | $VMSYS.JMP :?projekt2.STEROWNIKIF?E07D3                                         
+:0401|                                   | :?projekt2.STEROWNIKIF?B07CF                                                    
+:0401| 1C15 5800 04 00000000             | $VMSYS.MCD C_ORZESZKOW, #04, #00000000                                          
+:040a| 1C15 5C00 04 00000000             | $VMSYS.MCD C_CZEKOLADY, #04, #00000000                                          
+:0413|                                   | :?projekt2.STEROWNIKIF?E07D3                                                    
+:0413| 1C02 0D00 6504                    | $VMSYS.JZ ZAWOR_MIESZALNIK_OUT, :?projekt2.STEROWNIKIF?B07D5                    
+:0419| 0409 DC00 5400 7800               | $DEFAULT.DIV ?F?$DEFAULT_DIV07D6, Q_MIESZALNIK_OUT, SAMPLETIME                  
+:0421| 0329 E000 DC00 5800               | $DEFAULT.MUL ?F?$DEFAULT_MUL07D7, ?F?$DEFAULT_DIV07D6, C_ORZESZKOW              
+:0429| 0209 3800 3800 E000               | $DEFAULT.SUB V_ORZESZKOW, V_ORZESZKOW, ?F?$DEFAULT_MUL07D7                      
+:0431| 0409 E400 5400 7800               | $DEFAULT.DIV ?F?$DEFAULT_DIV07D9, Q_MIESZALNIK_OUT, SAMPLETIME                  
+:0439| 0329 E800 E400 5C00               | $DEFAULT.MUL ?F?$DEFAULT_MUL07DA, ?F?$DEFAULT_DIV07D9, C_CZEKOLADY              
+:0441| 0209 3C00 3C00 E800               | $DEFAULT.SUB V_CZEKOLADY, V_CZEKOLADY, ?F?$DEFAULT_MUL07DA                      
+:0449| 0510 AE00 0C00                    | $DEFAULT.NOT ?IF?B07DC, V_MIESZALNIK_EMPTY                                      
+:044f| 1C02 AE00 6504                    | $VMSYS.JZ ?IF?B07DC, :?projekt2.STEROWNIKIF?B07DD                               
+:0455| 0409 EC00 5400 7800               | $DEFAULT.DIV ?F?$DEFAULT_DIV07DF, Q_MIESZALNIK_OUT, SAMPLETIME                  
+:045d| 0129 4800 4800 EC00               | $DEFAULT.ADD V_SUM_MIESZALNIK_OUT, V_SUM_MIESZALNIK_OUT, ?F?$DEFAULT_DIV07DF    
+:0465|                                   | :?projekt2.STEROWNIKIF?B07DD                                                    
+:0465|                                   | :?projekt2.STEROWNIKIF?B07D5                                                    
+:0465| 1900 F000 3000                    | $DEFAULT.INT_TO_REAL ?F?INT_TO_REAL07E1, EPS_TOL_ORZESZKOW_PC                   
+:046b| 0409 7400 F000 BC00               | $DEFAULT.DIV EPS_TOL_ORZESZKOW, ?F?INT_TO_REAL07E1, ?L?CST07BB                  
+:0473| 1900 F400 2E00                    | $DEFAULT.INT_TO_REAL ?F?INT_TO_REAL07E3, EPS_TOL_CZEKOLADY_PC                   
+:0479| 0409 7000 F400 BC00               | $DEFAULT.DIV EPS_TOL_CZEKOLADY, ?F?INT_TO_REAL07E3, ?L?CST07BB                  
+:0481| 1900 F800 1C00                    | $DEFAULT.INT_TO_REAL ?F?INT_TO_REAL07E5, REQ_C_ORZESZKOW_PC                     
+:0487| 0409 6000 F800 BC00               | $DEFAULT.DIV REQ_C_ORZESZKOW, ?F?INT_TO_REAL07E5, ?L?CST07BB                    
+:048f| 0209 6400 FC00 6000               | $DEFAULT.SUB REQ_C_CZEKOLADY, ?L?CST07E7, REQ_C_ORZESZKOW                       
+:0497| 0209 6800 5800 6000               | $DEFAULT.SUB EPS_C_ORZESZKOW, C_ORZESZKOW, REQ_C_ORZESZKOW                      
+:049f| 0209 6C00 5C00 6400               | $DEFAULT.SUB EPS_C_CZEKOLADY, C_CZEKOLADY, REQ_C_CZEKOLADY                      
+:04a7| 1C02 2800 9905                    | $VMSYS.JZ AUTO_REG_C, :?projekt2.STEROWNIKIF?B07EC                              
+:04ad| 0129 0001 6000 7400               | $DEFAULT.ADD ?F?$DEFAULT_ADD07EF, REQ_C_ORZESZKOW, EPS_TOL_ORZESZKOW            
+:04b5| 1009 AF00 5800 0001               | $DEFAULT.GT ?IF?B07ED, C_ORZESZKOW, ?F?$DEFAULT_ADD07EF                         
+:04bd| 1C02 AF00 D904                    | $VMSYS.JZ ?IF?B07ED, :?projekt2.STEROWNIKIF?B07EE                               
+:04c3| 1C15 0100 01 00                   | $VMSYS.MCD ZAWORORZESZKI, #01, #00                                              
+:04c9| 1C15 2000 01 01                   | $VMSYS.MCD C_ORZESZKOW_HIGH, #01, #01                                           
+:04cf| 1C15 2100 01 00                   | $VMSYS.MCD C_ORZESZKOW_LOW, #01, #00                                            
+:04d5| 1C00 1705                         | $VMSYS.JMP :?projekt2.STEROWNIKIF?E07EE                                         
+:04d9|                                   | :?projekt2.STEROWNIKIF?B07EE                                                    
+:04d9| 0209 0801 6000 7400               | $DEFAULT.SUB ?F?$DEFAULT_SUB07F3, REQ_C_ORZESZKOW, EPS_TOL_ORZESZKOW            
+:04e1| 1409 0401 5800 0801               | $DEFAULT.LT ?IF?T07F2, C_ORZESZKOW, ?F?$DEFAULT_SUB07F3                         
+:04e9| 1C02 0401 0505                    | $VMSYS.JZ ?IF?T07F2, :?projekt2.STEROWNIKIF?S07F1                               
+:04ef| 1C15 0100 01 01                   | $VMSYS.MCD ZAWORORZESZKI, #01, #01                                              
+:04f5| 1C15 2000 01 00                   | $VMSYS.MCD C_ORZESZKOW_HIGH, #01, #00                                           
+:04fb| 1C15 2100 01 01                   | $VMSYS.MCD C_ORZESZKOW_LOW, #01, #01                                            
+:0501| 1C00 1705                         | $VMSYS.JMP :?projekt2.STEROWNIKIF?E07F5                                         
+:0505|                                   | :?projekt2.STEROWNIKIF?S07F1                                                    
+:0505| 1C15 0100 01 01                   | $VMSYS.MCD ZAWORORZESZKI, #01, #01                                              
+:050b| 1C15 2000 01 00                   | $VMSYS.MCD C_ORZESZKOW_HIGH, #01, #00                                           
+:0511| 1C15 2100 01 00                   | $VMSYS.MCD C_ORZESZKOW_LOW, #01, #00                                            
+:0517|                                   | :?projekt2.STEROWNIKIF?E07F5                                                    
+:0517|                                   | :?projekt2.STEROWNIKIF?E07EE                                                    
+:0517| 0129 0C01 6400 7000               | $DEFAULT.ADD ?F?$DEFAULT_ADD07F8, REQ_C_CZEKOLADY, EPS_TOL_CZEKOLADY            
+:051f| 1009 0501 5C00 0C01               | $DEFAULT.GT ?IF?B07F6, C_CZEKOLADY, ?F?$DEFAULT_ADD07F8                         
+:0527| 1C02 0501 4305                    | $VMSYS.JZ ?IF?B07F6, :?projekt2.STEROWNIKIF?B07F7                               
+:052d| 1C15 0600 01 00                   | $VMSYS.MCD ZAWORCZEKOLADA, #01, #00                                             
+:0533| 1C15 2200 01 01                   | $VMSYS.MCD C_CZEKOLADY_HIGH, #01, #01                                           
+:0539| 1C15 2300 01 00                   | $VMSYS.MCD C_CZEKOLADY_LOW, #01, #00                                            
+:053f| 1C00 8105                         | $VMSYS.JMP :?projekt2.STEROWNIKIF?E07F7                                         
+:0543|                                   | :?projekt2.STEROWNIKIF?B07F7                                                    
+:0543| 0209 1001 6400 7000               | $DEFAULT.SUB ?F?$DEFAULT_SUB07FC, REQ_C_CZEKOLADY, EPS_TOL_CZEKOLADY            
+:054b| 1409 0601 5C00 1001               | $DEFAULT.LT ?IF?T07FB, C_CZEKOLADY, ?F?$DEFAULT_SUB07FC                         
+:0553| 1C02 0601 6F05                    | $VMSYS.JZ ?IF?T07FB, :?projekt2.STEROWNIKIF?S07FA                               
+:0559| 1C15 0600 01 01                   | $VMSYS.MCD ZAWORCZEKOLADA, #01, #01                                             
+:055f| 1C15 2200 01 00                   | $VMSYS.MCD C_CZEKOLADY_HIGH, #01, #00                                           
+:0565| 1C15 2300 01 01                   | $VMSYS.MCD C_CZEKOLADY_LOW, #01, #01                                            
+:056b| 1C00 8105                         | $VMSYS.JMP :?projekt2.STEROWNIKIF?E07FE                                         
+:056f|                                   | :?projekt2.STEROWNIKIF?S07FA                                                    
+:056f| 1C15 0600 01 01                   | $VMSYS.MCD ZAWORCZEKOLADA, #01, #01                                             
+:0575| 1C15 2200 01 00                   | $VMSYS.MCD C_CZEKOLADY_HIGH, #01, #00                                           
+:057b| 1C15 2300 01 00                   | $VMSYS.MCD C_CZEKOLADY_LOW, #01, #00                                            
+:0581|                                   | :?projekt2.STEROWNIKIF?E07FE                                                    
+:0581|                                   | :?projekt2.STEROWNIKIF?E07F7                                                    
+:0581| 1C02 0000 8D05                    | $VMSYS.JZ V_MIESZALNIK_HIGH, :?projekt2.STEROWNIKIF?B0800                       
+:0587| 1C15 0D00 01 01                   | $VMSYS.MCD ZAWOR_MIESZALNIK_OUT, #01, #01                                       
+:058d|                                   | :?projekt2.STEROWNIKIF?B0800                                                    
+:058d| 1C02 0A00 9905                    | $VMSYS.JZ V_MIESZALNIK_LOW, :?projekt2.STEROWNIKIF?B0802                        
+:0593| 1C15 0D00 01 00                   | $VMSYS.MCD ZAWOR_MIESZALNIK_OUT, #01, #00                                       
+:0599|                                   | :?projekt2.STEROWNIKIF?B0802                                                    
+:0599|                                   | :?projekt2.STEROWNIKIF?B07EC                                                    
+:0599| 0329 1401 5800 BC00               | $DEFAULT.MUL ?F?$DEFAULT_MUL0803, C_ORZESZKOW, ?L?CST07BB                       
+:05a1| 190A 1800 1401                    | $DEFAULT.REAL_TO_INT C_ORZESZKOW_PC, ?F?$DEFAULT_MUL0803                        
+:05a7| 0329 1801 5C00 BC00               | $DEFAULT.MUL ?F?$DEFAULT_MUL0805, C_CZEKOLADY, ?L?CST07BB                       
+:05af| 190A 1A00 1801                    | $DEFAULT.REAL_TO_INT C_CZEKOLADY_PC, ?F?$DEFAULT_MUL0805                        
+:05b5| 0329 1C01 6400 BC00               | $DEFAULT.MUL ?F?$DEFAULT_MUL0807, REQ_C_CZEKOLADY, ?L?CST07BB                   
+:05bd| 190A 1E00 1C01                    | $DEFAULT.REAL_TO_INT REQ_C_CZEKOLADY_PC, ?F?$DEFAULT_MUL0807                    
+:05c3| 0329 2401 6800 BC00               | $DEFAULT.MUL ?F?$DEFAULT_MUL080A, EPS_C_ORZESZKOW, ?L?CST07BB                   
+:05cb| 190A 2201 2401                    | $DEFAULT.REAL_TO_INT ?F?REAL_TO_INT080B, ?F?$DEFAULT_MUL080A                    
+:05d1| 0122 2400 2201 2001               | $DEFAULT.ADD EPS_C_ORZESZKOW_PC, ?F?REAL_TO_INT080B, ?L?CST0809                 
+:05d9| 0329 2801 6C00 BC00               | $DEFAULT.MUL ?F?$DEFAULT_MUL080D, EPS_C_CZEKOLADY, ?L?CST07BB                   
+:05e1| 190A 2C01 2801                    | $DEFAULT.REAL_TO_INT ?F?REAL_TO_INT080E, ?F?$DEFAULT_MUL080D                    
+:05e7| 0122 2600 2C01 2001               | $DEFAULT.ADD EPS_C_CZEKOLADY_PC, ?F?REAL_TO_INT080E, ?L?CST0809                 
+:05ef| 0329 3001 3800 BC00               | $DEFAULT.MUL ?F?$DEFAULT_MUL0810, V_ORZESZKOW, ?L?CST07BB                       
+:05f7| 190A 2A00 3001                    | $DEFAULT.REAL_TO_INT V_ORZESZKOW_PC, ?F?$DEFAULT_MUL0810                        
+:05fd| 0329 3401 3C00 BC00               | $DEFAULT.MUL ?F?$DEFAULT_MUL0812, V_CZEKOLADY, ?L?CST07BB                       
+:0605| 190A 2C00 3401                    | $DEFAULT.REAL_TO_INT V_CZEKOLADY_PC, ?F?$DEFAULT_MUL0812                        
+:060b| 0329 3801 3400 BC00               | $DEFAULT.MUL ?F?$DEFAULT_MUL0814, V_WMIESZALNIKU, ?L?CST07BB                    
+:0613| 190A 0800 3801                    | $DEFAULT.REAL_TO_INT V_WMIESZALNIKU_PC, ?F?$DEFAULT_MUL0814                     
+:0619| 0329 4001 4000 3C01               | $DEFAULT.MUL ?F?$DEFAULT_MUL0817, V_SUM_CZEKOLADY, ?L?CST0816                   
+:0621| 190A 1200 4001                    | $DEFAULT.REAL_TO_INT V_SUM_CZEKOLADY_PC, ?F?$DEFAULT_MUL0817                    
+:0627| 0329 4401 4400 3C01               | $DEFAULT.MUL ?F?$DEFAULT_MUL0819, V_SUM_ORZESZKOW, ?L?CST0816                   
+:062f| 190A 1400 4401                    | $DEFAULT.REAL_TO_INT V_SUM_ORZESZKOW_PC, ?F?$DEFAULT_MUL0819                    
+:0635| 0329 4801 4800 3C01               | $DEFAULT.MUL ?F?$DEFAULT_MUL081B, V_SUM_MIESZALNIK_OUT, ?L?CST0816              
+:063d| 190A 1600 4801                    | $DEFAULT.REAL_TO_INT V_SUM_MIESZALNIK_OUT_PC, ?F?$DEFAULT_MUL081B               
+:0643| 1C13                              | $VMSYS.RETURN                                                                   
+:0645|                                   | :?projekt2.SYMULATOR?INIT                                                       
+:0645| 1C15 4C01 04 00000000             | $VMSYS.MCD Q_ORZESZKOW, #04, #00000000                                          
+:064e| 1C15 5001 04 00000000             | $VMSYS.MCD Q_CZEKOLADY, #04, #00000000                                          
+:0657| 1C15 5401 04 00000000             | $VMSYS.MCD Q_MIESZALNIK_OUT, #04, #00000000                                     
+:0660| 1C15 5801 04 0000A040             | $VMSYS.MCD SAMPLETIME, #04, #0000A040                                           
+:0669| 1C15 5C01 04 00007A44             | $VMSYS.MCD ?L?CST081D, #04, #00007A44                                           
+:0672| 1C15 7801 04 00000000             | $VMSYS.MCD ?L?CST0832, #04, #00000000                                           
+:067b| 1C13                              | $VMSYS.RETURN                                                                   
+:067d|                                   | :?projekt2.SYMULATOR?CODE                                                       
+:067d| 1900 6001 0200                    | $DEFAULT.INT_TO_REAL ?F?INT_TO_REAL081E, Q_ORZESZKOW_PC                         
+:0683| 0409 4C01 6001 5C01               | $DEFAULT.DIV Q_ORZESZKOW, ?F?INT_TO_REAL081E, ?L?CST081D                        
+:068b| 1900 6401 0400                    | $DEFAULT.INT_TO_REAL ?F?INT_TO_REAL0820, Q_CZEKOLADY_PC                         
+:0691| 0409 5001 6401 5C01               | $DEFAULT.DIV Q_CZEKOLADY, ?F?INT_TO_REAL0820, ?L?CST081D                        
+:0699| 1900 6801 0E00                    | $DEFAULT.INT_TO_REAL ?F?INT_TO_REAL0822, Q_MIESZALNIK_OUT_PC                    
+:069f| 0409 5401 6801 5C01               | $DEFAULT.DIV Q_MIESZALNIK_OUT, ?F?INT_TO_REAL0822, ?L?CST081D                   
+:06a7| 1C02 0100 BD06                    | $VMSYS.JZ ZAWORORZESZKI, :?projekt2.SYMULATORIF?B0825                           
+:06ad| 0409 6C01 4C01 5801               | $DEFAULT.DIV ?F?$DEFAULT_DIV0826, Q_ORZESZKOW, SAMPLETIME                       
+:06b5| 0129 3400 3400 6C01               | $DEFAULT.ADD V_WMIESZALNIKU, V_WMIESZALNIKU, ?F?$DEFAULT_DIV0826                
+:06bd|                                   | :?projekt2.SYMULATORIF?B0825                                                    
+:06bd| 1C02 0600 D306                    | $VMSYS.JZ ZAWORCZEKOLADA, :?projekt2.SYMULATORIF?B0829                          
+:06c3| 0409 7001 5001 5801               | $DEFAULT.DIV ?F?$DEFAULT_DIV082A, Q_CZEKOLADY, SAMPLETIME                       
+:06cb| 0129 3400 3400 7001               | $DEFAULT.ADD V_WMIESZALNIKU, V_WMIESZALNIKU, ?F?$DEFAULT_DIV082A                
+:06d3|                                   | :?projekt2.SYMULATORIF?B0829                                                    
+:06d3| 1C02 0D00 0007                    | $VMSYS.JZ ZAWOR_MIESZALNIK_OUT, :?projekt2.SYMULATORIF?B082D                    
+:06d9| 0409 7401 5401 5801               | $DEFAULT.DIV ?F?$DEFAULT_DIV082E, Q_MIESZALNIK_OUT, SAMPLETIME                  
+:06e1| 0209 3400 3400 7401               | $DEFAULT.SUB V_WMIESZALNIKU, V_WMIESZALNIKU, ?F?$DEFAULT_DIV082E                
+:06e9| 1309 0701 3400 7801               | $DEFAULT.LE ?IF?B0830, V_WMIESZALNIKU, ?L?CST0832                               
+:06f1| 1C02 0701 0007                    | $VMSYS.JZ ?IF?B0830, :?projekt2.SYMULATORIF?B0831                               
+:06f7| 1C15 3400 04 00000000             | $VMSYS.MCD V_WMIESZALNIKU, #04, #00000000                                       
+:0700|                                   | :?projekt2.SYMULATORIF?B0831                                                    
+:0700|                                   | :?projekt2.SYMULATORIF?B082D                                                    
+:0700| 0329 7C01 3400 5C01               | $DEFAULT.MUL ?F?$DEFAULT_MUL0834, V_WMIESZALNIKU, ?L?CST081D                    
+:0708| 190A 0800 7C01                    | $DEFAULT.REAL_TO_INT V_WMIESZALNIKU_PC, ?F?$DEFAULT_MUL0834                     
+:070e| 1C13                              | $VMSYS.RETURN                                                                   
+:0710 
+--------------
+{:0000} $VMSYS.MCD/1C15 {:0002} projekt2.V_MIESZALNIK_HIGH/0000, {:0004} #/01, {:0005} #/00
+{:0006} $VMSYS.MCD/1C15 {:0008} projekt2.Q_ORZESZKOW_PC/0200, {:000a} #/02, {:000b} #/6400
+{:000d} $VMSYS.MCD/1C15 {:000f} projekt2.Q_CZEKOLADY_PC/0400, {:0011} #/02, {:0012} #/FA00
+{:0014} $VMSYS.MCD/1C15 {:0016} projekt2.ZAWORORZESZKI/0100, {:0018} #/01, {:0019} #/00
+{:001a} $VMSYS.MCD/1C15 {:001c} projekt2.ZAWORCZEKOLADA/0600, {:001e} #/01, {:001f} #/00
+{:0020} $VMSYS.MCD/1C15 {:0022} projekt2.V_WMIESZALNIKU_PC/0800, {:0024} #/02, {:0025} #/0000
+{:0027} $VMSYS.MCD/1C15 {:0029} projekt2.SILNIK_DZIALA/0700, {:002b} #/01, {:002c} #/00
+{:002d} $VMSYS.MCD/1C15 {:002f} projekt2.V_MIESZALNIK_LOW/0A00, {:0031} #/01, {:0032} #/00
+{:0033} $VMSYS.MCD/1C15 {:0035} projekt2.V_MIESZALNIK_FULL/0B00, {:0037} #/01, {:0038} #/00
+{:0039} $VMSYS.MCD/1C15 {:003b} projekt2.V_MIESZALNIK_EMPTY/0C00, {:003d} #/01, {:003e} #/00
+{:003f} $VMSYS.MCD/1C15 {:0041} projekt2.ZAWOR_MIESZALNIK_OUT/0D00, {:0043} #/01, {:0044} #/00
+{:0045} $VMSYS.MCD/1C15 {:0047} projekt2.Q_MIESZALNIK_OUT_PC/0E00, {:0049} #/02, {:004a} #/E803
+{:004c} $VMSYS.MCD/1C15 {:004e} projekt2.START_ALL/1000, {:0050} #/01, {:0051} #/01
+{:0052} $VMSYS.MCD/1C15 {:0054} projekt2.ZZZ1/1100, {:0056} #/01, {:0057} #/00
+{:0058} $VMSYS.MCD/1C15 {:005a} projekt2.V_SUM_CZEKOLADY_PC/1200, {:005c} #/02, {:005d} #/0000
+{:005f} $VMSYS.MCD/1C15 {:0061} projekt2.V_SUM_ORZESZKOW_PC/1400, {:0063} #/02, {:0064} #/0000
+{:0066} $VMSYS.MCD/1C15 {:0068} projekt2.V_SUM_MIESZALNIK_OUT_PC/1600, {:006a} #/02, {:006b} #/0000
+{:006d} $VMSYS.MCD/1C15 {:006f} projekt2.C_ORZESZKOW_PC/1800, {:0071} #/02, {:0072} #/0000
+{:0074} $VMSYS.MCD/1C15 {:0076} projekt2.C_CZEKOLADY_PC/1A00, {:0078} #/02, {:0079} #/0000
+{:007b} $VMSYS.MCD/1C15 {:007d} projekt2.REQ_C_ORZESZKOW_PC/1C00, {:007f} #/02, {:0080} #/0000
+{:0082} $VMSYS.MCD/1C15 {:0084} projekt2.REQ_C_CZEKOLADY_PC/1E00, {:0086} #/02, {:0087} #/0000
+{:0089} $VMSYS.MCD/1C15 {:008b} projekt2.C_ORZESZKOW_HIGH/2000, {:008d} #/01, {:008e} #/00
+{:008f} $VMSYS.MCD/1C15 {:0091} projekt2.C_ORZESZKOW_LOW/2100, {:0093} #/01, {:0094} #/00
+{:0095} $VMSYS.MCD/1C15 {:0097} projekt2.C_CZEKOLADY_HIGH/2200, {:0099} #/01, {:009a} #/00
+{:009b} $VMSYS.MCD/1C15 {:009d} projekt2.C_CZEKOLADY_LOW/2300, {:009f} #/01, {:00a0} #/00
+{:00a1} $VMSYS.MCD/1C15 {:00a3} projekt2.EPS_C_ORZESZKOW_PC/2400, {:00a5} #/02, {:00a6} #/0000
+{:00a8} $VMSYS.MCD/1C15 {:00aa} projekt2.EPS_C_CZEKOLADY_PC/2600, {:00ac} #/02, {:00ad} #/0000
+{:00af} $VMSYS.MCD/1C15 {:00b1} projekt2.AUTO_REG_C/2800, {:00b3} #/01, {:00b4} #/00
+{:00b5} $VMSYS.MCD/1C15 {:00b7} projekt2.V_ORZESZKOW_PC/2A00, {:00b9} #/02, {:00ba} #/0000
+{:00bc} $VMSYS.MCD/1C15 {:00be} projekt2.V_CZEKOLADY_PC/2C00, {:00c0} #/02, {:00c1} #/0000
+{:00c3} $VMSYS.MCD/1C15 {:00c5} projekt2.EPS_TOL_CZEKOLADY_PC/2E00, {:00c7} #/02, {:00c8} #/1400
+{:00ca} $VMSYS.MCD/1C15 {:00cc} projekt2.EPS_TOL_ORZESZKOW_PC/3000, {:00ce} #/02, {:00cf} #/1400
+{:00d1} $VMSYS.MCD/1C15 {:00d3} projekt2.V_WMIESZALNIKU/3400, {:00d5} #/04, {:00d6} #/00000000
+{:00da} :?projekt2.Fabryka?TSKSTR/DA00
+{:00da} $VMSYS.CALB/1C16 {:00dc} #/0000, {:00de} :?projekt2.STEROWNIK?INIT/6901
+{:00e0} $VMSYS.CALB/1C16 {:00e2} #/0000, {:00e4} :?projekt2.SYMULATOR?INIT/4506
+{:00e6} :?projekt2.Fabryka?TSKLOOP/E600
+{:00e6} $VMSYS.CALB/1C16 {:00e8} #/0000, {:00ea} :?projekt2.STEROWNIK?CODE/5602
+{:00ec} $VMSYS.CALB/1C16 {:00ee} #/0000, {:00f0} :?projekt2.SYMULATOR?CODE/7D06
+{:00f2} $VMSYS.TRML/1C1D {:00f4} :?projekt2.Fabryka?TSKLOOP/E600
+{:00f6} :?IEC_61131.TON?INIT/F600
+{:00f6} $VMSYS.MCD/1C15 {:00f8} STIME/0C00, {:00fa} #/04, {:00fb} #/00000000
+{:00ff} $VMSYS.MCD/1C15 {:0101} Q/0100, {:0103} #/01, {:0104} #/00
+{:0105} $VMSYS.MCD/1C15 {:0107} ET/0800, {:0109} #/04, {:010a} #/00000000
+{:010e} $VMSYS.RETURN/1C13
+{:0110} :?IEC_61131.TON?CODE/1001
+{:0110} $DEFAULT.NOT/0510 {:0112} ?IF?B0074/0200, {:0114} IN/0000
+{:0116} $VMSYS.JZ/1C02 {:0118} ?IF?B0074/0200, {:011a} :?IEC_61131.TONIF?B0075/3301
+{:011c} $VMSYS.MCD/1C15 {:011e} Q/0100, {:0120} #/01, {:0121} #/00
+{:0122} $VMSYS.MCD/1C15 {:0124} ET/0800, {:0126} #/04, {:0127} #/00000000
+{:012b} $DEFAULT.CUR_TIME/1C17 {:012d} STIME/0C00
+{:012f} $VMSYS.JMP/1C00 {:0131} :?IEC_61131.TONIF?E0078/6701
+{:0133} :?IEC_61131.TONIF?B0075/3301
+{:0133} $DEFAULT.NOT/0510 {:0135} ?IF?B0079/0300, {:0137} Q/0100
+{:0139} $VMSYS.JZ/1C02 {:013b} ?IF?B0079/0300, {:013d} :?IEC_61131.TONIF?B007A/6701
+{:013f} $DEFAULT.CUR_TIME/1C17 {:0141} ?F?CUR_TIME007C/1000
+{:0143} $DEFAULT.SUB/020B {:0145} ET/0800, {:0147} ?F?CUR_TIME007C/1000, {:0149} STIME/0C00
+{:014b} $DEFAULT.GE/110B {:014d} ?IF?B007E/1400, {:014f} ET/0800, {:0151} PT/0400
+{:0153} $VMSYS.JZ/1C02 {:0155} ?IF?B007E/1400, {:0157} :?IEC_61131.TONIF?B007F/6701
+{:0159} $VMSYS.MCD/1C15 {:015b} Q/0100, {:015d} #/01, {:015e} #/01
+{:015f} $VMSYS.MEMCP/1C1F {:0161} ET/0800, {:0163} PT/0400, {:0165} #/0400
+{:0167} :?IEC_61131.TONIF?B007F/6701
+{:0167} :?IEC_61131.TONIF?B007A/6701
+{:0167} :?IEC_61131.TONIF?E0078/6701
+{:0167} $VMSYS.RETURN/1C13
+{:0169} :?projekt2.STEROWNIK?INIT/6901
+{:0169} $VMSYS.CALB/1C16 {:016b} SILNIK_OFF_TON/9800, {:016d} :?IEC_61131.TON?INIT/F600
+{:016f} $VMSYS.CALB/1C16 {:0171} SILNIK_ON_TON/8000, {:0173} :?IEC_61131.TON?INIT/F600
+{:0175} $VMSYS.MCD/1C15 {:0177} V_ORZESZKOW/3800, {:0179} #/04, {:017a} #/00000000
+{:017e} $VMSYS.MCD/1C15 {:0180} V_CZEKOLADY/3C00, {:0182} #/04, {:0183} #/00000000
+{:0187} $VMSYS.MCD/1C15 {:0189} V_SUM_CZEKOLADY/4000, {:018b} #/04, {:018c} #/00000000
+{:0190} $VMSYS.MCD/1C15 {:0192} V_SUM_ORZESZKOW/4400, {:0194} #/04, {:0195} #/00000000
+{:0199} $VMSYS.MCD/1C15 {:019b} V_SUM_MIESZALNIK_OUT/4800, {:019d} #/04, {:019e} #/00000000
+{:01a2} $VMSYS.MCD/1C15 {:01a4} Q_ORZESZKOW/4C00, {:01a6} #/04, {:01a7} #/00000000
+{:01ab} $VMSYS.MCD/1C15 {:01ad} Q_CZEKOLADY/5000, {:01af} #/04, {:01b0} #/00000000
+{:01b4} $VMSYS.MCD/1C15 {:01b6} Q_MIESZALNIK_OUT/5400, {:01b8} #/04, {:01b9} #/00000000
+{:01bd} $VMSYS.MCD/1C15 {:01bf} C_ORZESZKOW/5800, {:01c1} #/04, {:01c2} #/00000000
+{:01c6} $VMSYS.MCD/1C15 {:01c8} C_CZEKOLADY/5C00, {:01ca} #/04, {:01cb} #/00000000
+{:01cf} $VMSYS.MCD/1C15 {:01d1} REQ_C_ORZESZKOW/6000, {:01d3} #/04, {:01d4} #/00000000
+{:01d8} $VMSYS.MCD/1C15 {:01da} REQ_C_CZEKOLADY/6400, {:01dc} #/04, {:01dd} #/00000000
+{:01e1} $VMSYS.MCD/1C15 {:01e3} EPS_C_ORZESZKOW/6800, {:01e5} #/04, {:01e6} #/00000000
+{:01ea} $VMSYS.MCD/1C15 {:01ec} EPS_C_CZEKOLADY/6C00, {:01ee} #/04, {:01ef} #/00000000
+{:01f3} $VMSYS.MCD/1C15 {:01f5} EPS_TOL_CZEKOLADY/7000, {:01f7} #/04, {:01f8} #/00000000
+{:01fc} $VMSYS.MCD/1C15 {:01fe} EPS_TOL_ORZESZKOW/7400, {:0200} #/04, {:0201} #/00000000
+{:0205} $VMSYS.MCD/1C15 {:0207} SAMPLETIME/7800, {:0209} #/04, {:020a} #/0000A040
+{:020e} $VMSYS.MCD/1C15 {:0210} MAX_VOLUME/7C00, {:0212} #/04, {:0213} #/00002041
+{:0217} $VMSYS.MCD/1C15 {:0219} HIGH_VOLUME/B000, {:021b} #/04, {:021c} #/00000041
+{:0220} $VMSYS.MCD/1C15 {:0222} LOW_VOLUME/B400, {:0224} #/04, {:0225} #/00000040
+{:0229} $VMSYS.MCD/1C15 {:022b} EMPTY_VOLUME/B800, {:022d} #/04, {:022e} #/00000000
+{:0232} $VMSYS.MCD/1C15 {:0234} ?L?CST07BB/BC00, {:0236} #/04, {:0237} #/00007A44
+{:023b} $VMSYS.MCD/1C15 {:023d} ?L?CST07E7/FC00, {:023f} #/04, {:0240} #/0000803F
+{:0244} $VMSYS.MCD/1C15 {:0246} ?L?CST0809/2001, {:0248} #/02, {:0249} #/E803
+{:024b} $VMSYS.MCD/1C15 {:024d} ?L?CST0816/3C01, {:024f} #/04, {:0250} #/00002041
+{:0254} $VMSYS.RETURN/1C13
+{:0256} :?projekt2.STEROWNIK?CODE/5602
+{:0256} $DEFAULT.NOT/0510 {:0258} SILNIK_ON_TON.IN/8000, {:025a} SILNIK_OFF_TON.Q/9900
+{:025c} $VMSYS.MCD/1C15 {:025e} SILNIK_ON_TON.PT/8400, {:0260} #/04, {:0261} #/B80B0000
+{:0265} $VMSYS.CALB/1C16 {:0267} SILNIK_ON_TON/8000, {:0269} :?IEC_61131.TON?CODE/1001
+{:026b} $VMSYS.MEMCP/1C1F {:026d} SILNIK_OFF_TON.IN/9800, {:026f} SILNIK_ON_TON.Q/8100, {:0271} #/0100
+{:0273} $VMSYS.MCD/1C15 {:0275} SILNIK_OFF_TON.PT/9C00, {:0277} #/04, {:0278} #/E8030000
+{:027c} $VMSYS.CALB/1C16 {:027e} SILNIK_OFF_TON/9800, {:0280} :?IEC_61131.TON?CODE/1001
+{:0282} $VMSYS.JZ/1C02 {:0284} START_ALL/1000, {:0286} :?projekt2.STEROWNIKIF?B07A2/B402
+{:0288} $DEFAULT.NOT/0510 {:028a} ?LR?AND07A4/2900, {:028c} SILNIK_ON_TON.Q/8100
+{:028e} $VMSYS.JZ/1C02 {:0290} ?LR?AND07A4/2900, {:0292} :?projekt2.STEROWNIK?AND07A3/AA02
+{:0294} $DEFAULT.NOT/0510 {:0296} ?LR?AND07A6/3200, {:0298} V_MIESZALNIK_LOW/0A00
+{:029a} $VMSYS.JZ/1C02 {:029c} ?LR?AND07A6/3200, {:029e} :?projekt2.STEROWNIK?AND07A3/AA02
+{:02a0} $VMSYS.MCD/1C15 {:02a2} SILNIK_DZIALA/0700, {:02a4} #/01, {:02a5} #/01
+{:02a6} $VMSYS.JMP/1C00 {:02a8} :?projekt2.STEROWNIK?EAND07A9/B002
+{:02aa} :?projekt2.STEROWNIK?AND07A3/AA02
+{:02aa} $VMSYS.MCD/1C15 {:02ac} SILNIK_DZIALA/0700, {:02ae} #/01, {:02af} #/00
+{:02b0} :?projekt2.STEROWNIK?EAND07A9/B002
+{:02b0} $VMSYS.JMP/1C00 {:02b2} :?projekt2.STEROWNIKIF?E07AA/E702
+{:02b4} :?projekt2.STEROWNIKIF?B07A2/B402
+{:02b4} $VMSYS.MCD/1C15 {:02b6} SILNIK_DZIALA/0700, {:02b8} #/01, {:02b9} #/00
+{:02ba} $VMSYS.MCD/1C15 {:02bc} ZAWORORZESZKI/0100, {:02be} #/01, {:02bf} #/00
+{:02c0} $VMSYS.MCD/1C15 {:02c2} ZAWORCZEKOLADA/0600, {:02c4} #/01, {:02c5} #/00
+{:02c6} $VMSYS.MCD/1C15 {:02c8} ZAWOR_MIESZALNIK_OUT/0D00, {:02ca} #/01, {:02cb} #/00
+{:02cc} $VMSYS.MCD/1C15 {:02ce} V_SUM_CZEKOLADY/4000, {:02d0} #/04, {:02d1} #/00000000
+{:02d5} $VMSYS.MCD/1C15 {:02d7} V_SUM_ORZESZKOW/4400, {:02d9} #/04, {:02da} #/00000000
+{:02de} $VMSYS.MCD/1C15 {:02e0} V_SUM_MIESZALNIK_OUT/4800, {:02e2} #/04, {:02e3} #/00000000
+{:02e7} :?projekt2.STEROWNIKIF?E07AA/E702
+{:02e7} $DEFAULT.GE/1109 {:02e9} ?IF?B07AB/3300, {:02eb} V_WMIESZALNIKU/3400, {:02ed} MAX_VOLUME/7C00
+{:02ef} $VMSYS.JZ/1C02 {:02f1} ?IF?B07AB/3300, {:02f3} :?projekt2.STEROWNIKIF?B07AC/0B03
+{:02f5} $VMSYS.MCD/1C15 {:02f7} V_MIESZALNIK_FULL/0B00, {:02f9} #/01, {:02fa} #/01
+{:02fb} $VMSYS.MCD/1C15 {:02fd} ZAWORORZESZKI/0100, {:02ff} #/01, {:0300} #/00
+{:0301} $VMSYS.MCD/1C15 {:0303} ZAWORCZEKOLADA/0600, {:0305} #/01, {:0306} #/00
+{:0307} $VMSYS.JMP/1C00 {:0309} :?projekt2.STEROWNIKIF?E07AE/1103
+{:030b} :?projekt2.STEROWNIKIF?B07AC/0B03
+{:030b} $VMSYS.MCD/1C15 {:030d} V_MIESZALNIK_FULL/0B00, {:030f} #/01, {:0310} #/00
+{:0311} :?projekt2.STEROWNIKIF?E07AE/1103
+{:0311} $DEFAULT.GE/1109 {:0313} ?IF?B07AF/9500, {:0315} V_WMIESZALNIKU/3400, {:0317} HIGH_VOLUME/B000
+{:0319} $VMSYS.JZ/1C02 {:031b} ?IF?B07AF/9500, {:031d} :?projekt2.STEROWNIKIF?B07B0/2903
+{:031f} $VMSYS.MCD/1C15 {:0321} V_MIESZALNIK_HIGH/0000, {:0323} #/01, {:0324} #/01
+{:0325} $VMSYS.JMP/1C00 {:0327} :?projekt2.STEROWNIKIF?E07B2/2F03
+{:0329} :?projekt2.STEROWNIKIF?B07B0/2903
+{:0329} $VMSYS.MCD/1C15 {:032b} V_MIESZALNIK_HIGH/0000, {:032d} #/01, {:032e} #/00
+{:032f} :?projekt2.STEROWNIKIF?E07B2/2F03
+{:032f} $DEFAULT.LE/1309 {:0331} ?IF?B07B3/9600, {:0333} V_WMIESZALNIKU/3400, {:0335} LOW_VOLUME/B400
+{:0337} $VMSYS.JZ/1C02 {:0339} ?IF?B07B3/9600, {:033b} :?projekt2.STEROWNIKIF?B07B4/4703
+{:033d} $VMSYS.MCD/1C15 {:033f} V_MIESZALNIK_LOW/0A00, {:0341} #/01, {:0342} #/01
+{:0343} $VMSYS.JMP/1C00 {:0345} :?projekt2.STEROWNIKIF?E07B6/4D03
+{:0347} :?projekt2.STEROWNIKIF?B07B4/4703
+{:0347} $VMSYS.MCD/1C15 {:0349} V_MIESZALNIK_LOW/0A00, {:034b} #/01, {:034c} #/00
+{:034d} :?projekt2.STEROWNIKIF?E07B6/4D03
+{:034d} $DEFAULT.LE/1309 {:034f} ?IF?B07B7/9700, {:0351} V_WMIESZALNIKU/3400, {:0353} EMPTY_VOLUME/B800
+{:0355} $VMSYS.JZ/1C02 {:0357} ?IF?B07B7/9700, {:0359} :?projekt2.STEROWNIKIF?B07B8/6503
+{:035b} $VMSYS.MCD/1C15 {:035d} V_MIESZALNIK_EMPTY/0C00, {:035f} #/01, {:0360} #/01
+{:0361} $VMSYS.JMP/1C00 {:0363} :?projekt2.STEROWNIKIF?E07BA/6B03
+{:0365} :?projekt2.STEROWNIKIF?B07B8/6503
+{:0365} $VMSYS.MCD/1C15 {:0367} V_MIESZALNIK_EMPTY/0C00, {:0369} #/01, {:036a} #/00
+{:036b} :?projekt2.STEROWNIKIF?E07BA/6B03
+{:036b} $DEFAULT.INT_TO_REAL/1900 {:036d} ?F?INT_TO_REAL07BC/C000, {:036f} Q_ORZESZKOW_PC/0200
+{:0371} $DEFAULT.DIV/0409 {:0373} Q_ORZESZKOW/4C00, {:0375} ?F?INT_TO_REAL07BC/C000, {:0377} ?L?CST07BB/BC00
+{:0379} $DEFAULT.INT_TO_REAL/1900 {:037b} ?F?INT_TO_REAL07BE/C400, {:037d} Q_CZEKOLADY_PC/0400
+{:037f} $DEFAULT.DIV/0409 {:0381} Q_CZEKOLADY/5000, {:0383} ?F?INT_TO_REAL07BE/C400, {:0385} ?L?CST07BB/BC00
+{:0387} $DEFAULT.INT_TO_REAL/1900 {:0389} ?F?INT_TO_REAL07C0/C800, {:038b} Q_MIESZALNIK_OUT_PC/0E00
+{:038d} $DEFAULT.DIV/0409 {:038f} Q_MIESZALNIK_OUT/5400, {:0391} ?F?INT_TO_REAL07C0/C800, {:0393} ?L?CST07BB/BC00
+{:0395} $VMSYS.JZ/1C02 {:0397} ZAWORORZESZKI/0100, {:0399} :?projekt2.STEROWNIKIF?B07C3/BB03
+{:039b} $DEFAULT.DIV/0409 {:039d} ?F?$DEFAULT_DIV07C4/CC00, {:039f} Q_ORZESZKOW/4C00, {:03a1} SAMPLETIME/7800
+{:03a3} $DEFAULT.ADD/0129 {:03a5} V_ORZESZKOW/3800, {:03a7} V_ORZESZKOW/3800, {:03a9} ?F?$DEFAULT_DIV07C4/CC00
+{:03ab} $DEFAULT.DIV/0409 {:03ad} ?F?$DEFAULT_DIV07C6/D000, {:03af} Q_ORZESZKOW/4C00, {:03b1} SAMPLETIME/7800
+{:03b3} $DEFAULT.ADD/0129 {:03b5} V_SUM_ORZESZKOW/4400, {:03b7} V_SUM_ORZESZKOW/4400, {:03b9} ?F?$DEFAULT_DIV07C6/D000
+{:03bb} :?projekt2.STEROWNIKIF?B07C3/BB03
+{:03bb} $VMSYS.JZ/1C02 {:03bd} ZAWORCZEKOLADA/0600, {:03bf} :?projekt2.STEROWNIKIF?B07C9/E103
+{:03c1} $DEFAULT.DIV/0409 {:03c3} ?F?$DEFAULT_DIV07CA/D400, {:03c5} Q_CZEKOLADY/5000, {:03c7} SAMPLETIME/7800
+{:03c9} $DEFAULT.ADD/0129 {:03cb} V_CZEKOLADY/3C00, {:03cd} V_CZEKOLADY/3C00, {:03cf} ?F?$DEFAULT_DIV07CA/D400
+{:03d1} $DEFAULT.DIV/0409 {:03d3} ?F?$DEFAULT_DIV07CC/D800, {:03d5} Q_CZEKOLADY/5000, {:03d7} SAMPLETIME/7800
+{:03d9} $DEFAULT.ADD/0129 {:03db} V_SUM_CZEKOLADY/4000, {:03dd} V_SUM_CZEKOLADY/4000, {:03df} ?F?$DEFAULT_DIV07CC/D800
+{:03e1} :?projekt2.STEROWNIKIF?B07C9/E103
+{:03e1} $DEFAULT.NOT/0510 {:03e3} ?IF?B07CE/AD00, {:03e5} V_MIESZALNIK_EMPTY/0C00
+{:03e7} $VMSYS.JZ/1C02 {:03e9} ?IF?B07CE/AD00, {:03eb} :?projekt2.STEROWNIKIF?B07CF/0104
+{:03ed} $DEFAULT.DIV/0409 {:03ef} C_ORZESZKOW/5800, {:03f1} V_ORZESZKOW/3800, {:03f3} V_WMIESZALNIKU/3400
+{:03f5} $DEFAULT.DIV/0409 {:03f7} C_CZEKOLADY/5C00, {:03f9} V_CZEKOLADY/3C00, {:03fb} V_WMIESZALNIKU/3400
+{:03fd} $VMSYS.JMP/1C00 {:03ff} :?projekt2.STEROWNIKIF?E07D3/1304
+{:0401} :?projekt2.STEROWNIKIF?B07CF/0104
+{:0401} $VMSYS.MCD/1C15 {:0403} C_ORZESZKOW/5800, {:0405} #/04, {:0406} #/00000000
+{:040a} $VMSYS.MCD/1C15 {:040c} C_CZEKOLADY/5C00, {:040e} #/04, {:040f} #/00000000
+{:0413} :?projekt2.STEROWNIKIF?E07D3/1304
+{:0413} $VMSYS.JZ/1C02 {:0415} ZAWOR_MIESZALNIK_OUT/0D00, {:0417} :?projekt2.STEROWNIKIF?B07D5/6504
+{:0419} $DEFAULT.DIV/0409 {:041b} ?F?$DEFAULT_DIV07D6/DC00, {:041d} Q_MIESZALNIK_OUT/5400, {:041f} SAMPLETIME/7800
+{:0421} $DEFAULT.MUL/0329 {:0423} ?F?$DEFAULT_MUL07D7/E000, {:0425} ?F?$DEFAULT_DIV07D6/DC00, {:0427} C_ORZESZKOW/5800
+{:0429} $DEFAULT.SUB/0209 {:042b} V_ORZESZKOW/3800, {:042d} V_ORZESZKOW/3800, {:042f} ?F?$DEFAULT_MUL07D7/E000
+{:0431} $DEFAULT.DIV/0409 {:0433} ?F?$DEFAULT_DIV07D9/E400, {:0435} Q_MIESZALNIK_OUT/5400, {:0437} SAMPLETIME/7800
+{:0439} $DEFAULT.MUL/0329 {:043b} ?F?$DEFAULT_MUL07DA/E800, {:043d} ?F?$DEFAULT_DIV07D9/E400, {:043f} C_CZEKOLADY/5C00
+{:0441} $DEFAULT.SUB/0209 {:0443} V_CZEKOLADY/3C00, {:0445} V_CZEKOLADY/3C00, {:0447} ?F?$DEFAULT_MUL07DA/E800
+{:0449} $DEFAULT.NOT/0510 {:044b} ?IF?B07DC/AE00, {:044d} V_MIESZALNIK_EMPTY/0C00
+{:044f} $VMSYS.JZ/1C02 {:0451} ?IF?B07DC/AE00, {:0453} :?projekt2.STEROWNIKIF?B07DD/6504
+{:0455} $DEFAULT.DIV/0409 {:0457} ?F?$DEFAULT_DIV07DF/EC00, {:0459} Q_MIESZALNIK_OUT/5400, {:045b} SAMPLETIME/7800
+{:045d} $DEFAULT.ADD/0129 {:045f} V_SUM_MIESZALNIK_OUT/4800, {:0461} V_SUM_MIESZALNIK_OUT/4800, {:0463} ?F?$DEFAULT_DIV07DF/EC00
+{:0465} :?projekt2.STEROWNIKIF?B07DD/6504
+{:0465} :?projekt2.STEROWNIKIF?B07D5/6504
+{:0465} $DEFAULT.INT_TO_REAL/1900 {:0467} ?F?INT_TO_REAL07E1/F000, {:0469} EPS_TOL_ORZESZKOW_PC/3000
+{:046b} $DEFAULT.DIV/0409 {:046d} EPS_TOL_ORZESZKOW/7400, {:046f} ?F?INT_TO_REAL07E1/F000, {:0471} ?L?CST07BB/BC00
+{:0473} $DEFAULT.INT_TO_REAL/1900 {:0475} ?F?INT_TO_REAL07E3/F400, {:0477} EPS_TOL_CZEKOLADY_PC/2E00
+{:0479} $DEFAULT.DIV/0409 {:047b} EPS_TOL_CZEKOLADY/7000, {:047d} ?F?INT_TO_REAL07E3/F400, {:047f} ?L?CST07BB/BC00
+{:0481} $DEFAULT.INT_TO_REAL/1900 {:0483} ?F?INT_TO_REAL07E5/F800, {:0485} REQ_C_ORZESZKOW_PC/1C00
+{:0487} $DEFAULT.DIV/0409 {:0489} REQ_C_ORZESZKOW/6000, {:048b} ?F?INT_TO_REAL07E5/F800, {:048d} ?L?CST07BB/BC00
+{:048f} $DEFAULT.SUB/0209 {:0491} REQ_C_CZEKOLADY/6400, {:0493} ?L?CST07E7/FC00, {:0495} REQ_C_ORZESZKOW/6000
+{:0497} $DEFAULT.SUB/0209 {:0499} EPS_C_ORZESZKOW/6800, {:049b} C_ORZESZKOW/5800, {:049d} REQ_C_ORZESZKOW/6000
+{:049f} $DEFAULT.SUB/0209 {:04a1} EPS_C_CZEKOLADY/6C00, {:04a3} C_CZEKOLADY/5C00, {:04a5} REQ_C_CZEKOLADY/6400
+{:04a7} $VMSYS.JZ/1C02 {:04a9} AUTO_REG_C/2800, {:04ab} :?projekt2.STEROWNIKIF?B07EC/9905
+{:04ad} $DEFAULT.ADD/0129 {:04af} ?F?$DEFAULT_ADD07EF/0001, {:04b1} REQ_C_ORZESZKOW/6000, {:04b3} EPS_TOL_ORZESZKOW/7400
+{:04b5} $DEFAULT.GT/1009 {:04b7} ?IF?B07ED/AF00, {:04b9} C_ORZESZKOW/5800, {:04bb} ?F?$DEFAULT_ADD07EF/0001
+{:04bd} $VMSYS.JZ/1C02 {:04bf} ?IF?B07ED/AF00, {:04c1} :?projekt2.STEROWNIKIF?B07EE/D904
+{:04c3} $VMSYS.MCD/1C15 {:04c5} ZAWORORZESZKI/0100, {:04c7} #/01, {:04c8} #/00
+{:04c9} $VMSYS.MCD/1C15 {:04cb} C_ORZESZKOW_HIGH/2000, {:04cd} #/01, {:04ce} #/01
+{:04cf} $VMSYS.MCD/1C15 {:04d1} C_ORZESZKOW_LOW/2100, {:04d3} #/01, {:04d4} #/00
+{:04d5} $VMSYS.JMP/1C00 {:04d7} :?projekt2.STEROWNIKIF?E07EE/1705
+{:04d9} :?projekt2.STEROWNIKIF?B07EE/D904
+{:04d9} $DEFAULT.SUB/0209 {:04db} ?F?$DEFAULT_SUB07F3/0801, {:04dd} REQ_C_ORZESZKOW/6000, {:04df} EPS_TOL_ORZESZKOW/7400
+{:04e1} $DEFAULT.LT/1409 {:04e3} ?IF?T07F2/0401, {:04e5} C_ORZESZKOW/5800, {:04e7} ?F?$DEFAULT_SUB07F3/0801
+{:04e9} $VMSYS.JZ/1C02 {:04eb} ?IF?T07F2/0401, {:04ed} :?projekt2.STEROWNIKIF?S07F1/0505
+{:04ef} $VMSYS.MCD/1C15 {:04f1} ZAWORORZESZKI/0100, {:04f3} #/01, {:04f4} #/01
+{:04f5} $VMSYS.MCD/1C15 {:04f7} C_ORZESZKOW_HIGH/2000, {:04f9} #/01, {:04fa} #/00
+{:04fb} $VMSYS.MCD/1C15 {:04fd} C_ORZESZKOW_LOW/2100, {:04ff} #/01, {:0500} #/01
+{:0501} $VMSYS.JMP/1C00 {:0503} :?projekt2.STEROWNIKIF?E07F5/1705
+{:0505} :?projekt2.STEROWNIKIF?S07F1/0505
+{:0505} $VMSYS.MCD/1C15 {:0507} ZAWORORZESZKI/0100, {:0509} #/01, {:050a} #/01
+{:050b} $VMSYS.MCD/1C15 {:050d} C_ORZESZKOW_HIGH/2000, {:050f} #/01, {:0510} #/00
+{:0511} $VMSYS.MCD/1C15 {:0513} C_ORZESZKOW_LOW/2100, {:0515} #/01, {:0516} #/00
+{:0517} :?projekt2.STEROWNIKIF?E07F5/1705
+{:0517} :?projekt2.STEROWNIKIF?E07EE/1705
+{:0517} $DEFAULT.ADD/0129 {:0519} ?F?$DEFAULT_ADD07F8/0C01, {:051b} REQ_C_CZEKOLADY/6400, {:051d} EPS_TOL_CZEKOLADY/7000
+{:051f} $DEFAULT.GT/1009 {:0521} ?IF?B07F6/0501, {:0523} C_CZEKOLADY/5C00, {:0525} ?F?$DEFAULT_ADD07F8/0C01
+{:0527} $VMSYS.JZ/1C02 {:0529} ?IF?B07F6/0501, {:052b} :?projekt2.STEROWNIKIF?B07F7/4305
+{:052d} $VMSYS.MCD/1C15 {:052f} ZAWORCZEKOLADA/0600, {:0531} #/01, {:0532} #/00
+{:0533} $VMSYS.MCD/1C15 {:0535} C_CZEKOLADY_HIGH/2200, {:0537} #/01, {:0538} #/01
+{:0539} $VMSYS.MCD/1C15 {:053b} C_CZEKOLADY_LOW/2300, {:053d} #/01, {:053e} #/00
+{:053f} $VMSYS.JMP/1C00 {:0541} :?projekt2.STEROWNIKIF?E07F7/8105
+{:0543} :?projekt2.STEROWNIKIF?B07F7/4305
+{:0543} $DEFAULT.SUB/0209 {:0545} ?F?$DEFAULT_SUB07FC/1001, {:0547} REQ_C_CZEKOLADY/6400, {:0549} EPS_TOL_CZEKOLADY/7000
+{:054b} $DEFAULT.LT/1409 {:054d} ?IF?T07FB/0601, {:054f} C_CZEKOLADY/5C00, {:0551} ?F?$DEFAULT_SUB07FC/1001
+{:0553} $VMSYS.JZ/1C02 {:0555} ?IF?T07FB/0601, {:0557} :?projekt2.STEROWNIKIF?S07FA/6F05
+{:0559} $VMSYS.MCD/1C15 {:055b} ZAWORCZEKOLADA/0600, {:055d} #/01, {:055e} #/01
+{:055f} $VMSYS.MCD/1C15 {:0561} C_CZEKOLADY_HIGH/2200, {:0563} #/01, {:0564} #/00
+{:0565} $VMSYS.MCD/1C15 {:0567} C_CZEKOLADY_LOW/2300, {:0569} #/01, {:056a} #/01
+{:056b} $VMSYS.JMP/1C00 {:056d} :?projekt2.STEROWNIKIF?E07FE/8105
+{:056f} :?projekt2.STEROWNIKIF?S07FA/6F05
+{:056f} $VMSYS.MCD/1C15 {:0571} ZAWORCZEKOLADA/0600, {:0573} #/01, {:0574} #/01
+{:0575} $VMSYS.MCD/1C15 {:0577} C_CZEKOLADY_HIGH/2200, {:0579} #/01, {:057a} #/00
+{:057b} $VMSYS.MCD/1C15 {:057d} C_CZEKOLADY_LOW/2300, {:057f} #/01, {:0580} #/00
+{:0581} :?projekt2.STEROWNIKIF?E07FE/8105
+{:0581} :?projekt2.STEROWNIKIF?E07F7/8105
+{:0581} $VMSYS.JZ/1C02 {:0583} V_MIESZALNIK_HIGH/0000, {:0585} :?projekt2.STEROWNIKIF?B0800/8D05
+{:0587} $VMSYS.MCD/1C15 {:0589} ZAWOR_MIESZALNIK_OUT/0D00, {:058b} #/01, {:058c} #/01
+{:058d} :?projekt2.STEROWNIKIF?B0800/8D05
+{:058d} $VMSYS.JZ/1C02 {:058f} V_MIESZALNIK_LOW/0A00, {:0591} :?projekt2.STEROWNIKIF?B0802/9905
+{:0593} $VMSYS.MCD/1C15 {:0595} ZAWOR_MIESZALNIK_OUT/0D00, {:0597} #/01, {:0598} #/00
+{:0599} :?projekt2.STEROWNIKIF?B0802/9905
+{:0599} :?projekt2.STEROWNIKIF?B07EC/9905
+{:0599} $DEFAULT.MUL/0329 {:059b} ?F?$DEFAULT_MUL0803/1401, {:059d} C_ORZESZKOW/5800, {:059f} ?L?CST07BB/BC00
+{:05a1} $DEFAULT.REAL_TO_INT/190A {:05a3} C_ORZESZKOW_PC/1800, {:05a5} ?F?$DEFAULT_MUL0803/1401
+{:05a7} $DEFAULT.MUL/0329 {:05a9} ?F?$DEFAULT_MUL0805/1801, {:05ab} C_CZEKOLADY/5C00, {:05ad} ?L?CST07BB/BC00
+{:05af} $DEFAULT.REAL_TO_INT/190A {:05b1} C_CZEKOLADY_PC/1A00, {:05b3} ?F?$DEFAULT_MUL0805/1801
+{:05b5} $DEFAULT.MUL/0329 {:05b7} ?F?$DEFAULT_MUL0807/1C01, {:05b9} REQ_C_CZEKOLADY/6400, {:05bb} ?L?CST07BB/BC00
+{:05bd} $DEFAULT.REAL_TO_INT/190A {:05bf} REQ_C_CZEKOLADY_PC/1E00, {:05c1} ?F?$DEFAULT_MUL0807/1C01
+{:05c3} $DEFAULT.MUL/0329 {:05c5} ?F?$DEFAULT_MUL080A/2401, {:05c7} EPS_C_ORZESZKOW/6800, {:05c9} ?L?CST07BB/BC00
+{:05cb} $DEFAULT.REAL_TO_INT/190A {:05cd} ?F?REAL_TO_INT080B/2201, {:05cf} ?F?$DEFAULT_MUL080A/2401
+{:05d1} $DEFAULT.ADD/0122 {:05d3} EPS_C_ORZESZKOW_PC/2400, {:05d5} ?F?REAL_TO_INT080B/2201, {:05d7} ?L?CST0809/2001
+{:05d9} $DEFAULT.MUL/0329 {:05db} ?F?$DEFAULT_MUL080D/2801, {:05dd} EPS_C_CZEKOLADY/6C00, {:05df} ?L?CST07BB/BC00
+{:05e1} $DEFAULT.REAL_TO_INT/190A {:05e3} ?F?REAL_TO_INT080E/2C01, {:05e5} ?F?$DEFAULT_MUL080D/2801
+{:05e7} $DEFAULT.ADD/0122 {:05e9} EPS_C_CZEKOLADY_PC/2600, {:05eb} ?F?REAL_TO_INT080E/2C01, {:05ed} ?L?CST0809/2001
+{:05ef} $DEFAULT.MUL/0329 {:05f1} ?F?$DEFAULT_MUL0810/3001, {:05f3} V_ORZESZKOW/3800, {:05f5} ?L?CST07BB/BC00
+{:05f7} $DEFAULT.REAL_TO_INT/190A {:05f9} V_ORZESZKOW_PC/2A00, {:05fb} ?F?$DEFAULT_MUL0810/3001
+{:05fd} $DEFAULT.MUL/0329 {:05ff} ?F?$DEFAULT_MUL0812/3401, {:0601} V_CZEKOLADY/3C00, {:0603} ?L?CST07BB/BC00
+{:0605} $DEFAULT.REAL_TO_INT/190A {:0607} V_CZEKOLADY_PC/2C00, {:0609} ?F?$DEFAULT_MUL0812/3401
+{:060b} $DEFAULT.MUL/0329 {:060d} ?F?$DEFAULT_MUL0814/3801, {:060f} V_WMIESZALNIKU/3400, {:0611} ?L?CST07BB/BC00
+{:0613} $DEFAULT.REAL_TO_INT/190A {:0615} V_WMIESZALNIKU_PC/0800, {:0617} ?F?$DEFAULT_MUL0814/3801
+{:0619} $DEFAULT.MUL/0329 {:061b} ?F?$DEFAULT_MUL0817/4001, {:061d} V_SUM_CZEKOLADY/4000, {:061f} ?L?CST0816/3C01
+{:0621} $DEFAULT.REAL_TO_INT/190A {:0623} V_SUM_CZEKOLADY_PC/1200, {:0625} ?F?$DEFAULT_MUL0817/4001
+{:0627} $DEFAULT.MUL/0329 {:0629} ?F?$DEFAULT_MUL0819/4401, {:062b} V_SUM_ORZESZKOW/4400, {:062d} ?L?CST0816/3C01
+{:062f} $DEFAULT.REAL_TO_INT/190A {:0631} V_SUM_ORZESZKOW_PC/1400, {:0633} ?F?$DEFAULT_MUL0819/4401
+{:0635} $DEFAULT.MUL/0329 {:0637} ?F?$DEFAULT_MUL081B/4801, {:0639} V_SUM_MIESZALNIK_OUT/4800, {:063b} ?L?CST0816/3C01
+{:063d} $DEFAULT.REAL_TO_INT/190A {:063f} V_SUM_MIESZALNIK_OUT_PC/1600, {:0641} ?F?$DEFAULT_MUL081B/4801
+{:0643} $VMSYS.RETURN/1C13
+{:0645} :?projekt2.SYMULATOR?INIT/4506
+{:0645} $VMSYS.MCD/1C15 {:0647} Q_ORZESZKOW/4C01, {:0649} #/04, {:064a} #/00000000
+{:064e} $VMSYS.MCD/1C15 {:0650} Q_CZEKOLADY/5001, {:0652} #/04, {:0653} #/00000000
+{:0657} $VMSYS.MCD/1C15 {:0659} Q_MIESZALNIK_OUT/5401, {:065b} #/04, {:065c} #/00000000
+{:0660} $VMSYS.MCD/1C15 {:0662} SAMPLETIME/5801, {:0664} #/04, {:0665} #/0000A040
+{:0669} $VMSYS.MCD/1C15 {:066b} ?L?CST081D/5C01, {:066d} #/04, {:066e} #/00007A44
+{:0672} $VMSYS.MCD/1C15 {:0674} ?L?CST0832/7801, {:0676} #/04, {:0677} #/00000000
+{:067b} $VMSYS.RETURN/1C13
+{:067d} :?projekt2.SYMULATOR?CODE/7D06
+{:067d} $DEFAULT.INT_TO_REAL/1900 {:067f} ?F?INT_TO_REAL081E/6001, {:0681} Q_ORZESZKOW_PC/0200
+{:0683} $DEFAULT.DIV/0409 {:0685} Q_ORZESZKOW/4C01, {:0687} ?F?INT_TO_REAL081E/6001, {:0689} ?L?CST081D/5C01
+{:068b} $DEFAULT.INT_TO_REAL/1900 {:068d} ?F?INT_TO_REAL0820/6401, {:068f} Q_CZEKOLADY_PC/0400
+{:0691} $DEFAULT.DIV/0409 {:0693} Q_CZEKOLADY/5001, {:0695} ?F?INT_TO_REAL0820/6401, {:0697} ?L?CST081D/5C01
+{:0699} $DEFAULT.INT_TO_REAL/1900 {:069b} ?F?INT_TO_REAL0822/6801, {:069d} Q_MIESZALNIK_OUT_PC/0E00
+{:069f} $DEFAULT.DIV/0409 {:06a1} Q_MIESZALNIK_OUT/5401, {:06a3} ?F?INT_TO_REAL0822/6801, {:06a5} ?L?CST081D/5C01
+{:06a7} $VMSYS.JZ/1C02 {:06a9} ZAWORORZESZKI/0100, {:06ab} :?projekt2.SYMULATORIF?B0825/BD06
+{:06ad} $DEFAULT.DIV/0409 {:06af} ?F?$DEFAULT_DIV0826/6C01, {:06b1} Q_ORZESZKOW/4C01, {:06b3} SAMPLETIME/5801
+{:06b5} $DEFAULT.ADD/0129 {:06b7} V_WMIESZALNIKU/3400, {:06b9} V_WMIESZALNIKU/3400, {:06bb} ?F?$DEFAULT_DIV0826/6C01
+{:06bd} :?projekt2.SYMULATORIF?B0825/BD06
+{:06bd} $VMSYS.JZ/1C02 {:06bf} ZAWORCZEKOLADA/0600, {:06c1} :?projekt2.SYMULATORIF?B0829/D306
+{:06c3} $DEFAULT.DIV/0409 {:06c5} ?F?$DEFAULT_DIV082A/7001, {:06c7} Q_CZEKOLADY/5001, {:06c9} SAMPLETIME/5801
+{:06cb} $DEFAULT.ADD/0129 {:06cd} V_WMIESZALNIKU/3400, {:06cf} V_WMIESZALNIKU/3400, {:06d1} ?F?$DEFAULT_DIV082A/7001
+{:06d3} :?projekt2.SYMULATORIF?B0829/D306
+{:06d3} $VMSYS.JZ/1C02 {:06d5} ZAWOR_MIESZALNIK_OUT/0D00, {:06d7} :?projekt2.SYMULATORIF?B082D/0007
+{:06d9} $DEFAULT.DIV/0409 {:06db} ?F?$DEFAULT_DIV082E/7401, {:06dd} Q_MIESZALNIK_OUT/5401, {:06df} SAMPLETIME/5801
+{:06e1} $DEFAULT.SUB/0209 {:06e3} V_WMIESZALNIKU/3400, {:06e5} V_WMIESZALNIKU/3400, {:06e7} ?F?$DEFAULT_DIV082E/7401
+{:06e9} $DEFAULT.LE/1309 {:06eb} ?IF?B0830/0701, {:06ed} V_WMIESZALNIKU/3400, {:06ef} ?L?CST0832/7801
+{:06f1} $VMSYS.JZ/1C02 {:06f3} ?IF?B0830/0701, {:06f5} :?projekt2.SYMULATORIF?B0831/0007
+{:06f7} $VMSYS.MCD/1C15 {:06f9} V_WMIESZALNIKU/3400, {:06fb} #/04, {:06fc} #/00000000
+{:0700} :?projekt2.SYMULATORIF?B0831/0007
+{:0700} :?projekt2.SYMULATORIF?B082D/0007
+{:0700} $DEFAULT.MUL/0329 {:0702} ?F?$DEFAULT_MUL0834/7C01, {:0704} V_WMIESZALNIKU/3400, {:0706} ?L?CST081D/5C01
+{:0708} $DEFAULT.REAL_TO_INT/190A {:070a} V_WMIESZALNIKU_PC/0800, {:070c} ?F?$DEFAULT_MUL0834/7C01
+{:070e} $VMSYS.RETURN/1C13
+{:0710}
+</MNEMONIC_MAP>
+    <DATA_MAP>
+      <OBJ ObjType="VAR" LName="V_MIESZALNIK_HIGH" PName="projekt2.V_MIESZALNIK_HIGH" Addr="0000" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="Q_ORZESZKOW_PC" PName="projekt2.Q_ORZESZKOW_PC" Addr="0002" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="Q_CZEKOLADY_PC" PName="projekt2.Q_CZEKOLADY_PC" Addr="0004" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="ZAWORORZESZKI" PName="projekt2.ZAWORORZESZKI" Addr="0001" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="ZAWORCZEKOLADA" PName="projekt2.ZAWORCZEKOLADA" Addr="0006" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="V_WMIESZALNIKU_PC" PName="projekt2.V_WMIESZALNIKU_PC" Addr="0008" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="SILNIK_DZIALA" PName="projekt2.SILNIK_DZIALA" Addr="0007" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="V_MIESZALNIK_LOW" PName="projekt2.V_MIESZALNIK_LOW" Addr="000a" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="V_MIESZALNIK_FULL" PName="projekt2.V_MIESZALNIK_FULL" Addr="000b" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="V_MIESZALNIK_EMPTY" PName="projekt2.V_MIESZALNIK_EMPTY" Addr="000c" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="ZAWOR_MIESZALNIK_OUT" PName="projekt2.ZAWOR_MIESZALNIK_OUT" Addr="000d" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="Q_MIESZALNIK_OUT_PC" PName="projekt2.Q_MIESZALNIK_OUT_PC" Addr="000e" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="START_ALL" PName="projekt2.START_ALL" Addr="0010" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="ZZZ1" PName="projekt2.ZZZ1" Addr="0011" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="V_SUM_CZEKOLADY_PC" PName="projekt2.V_SUM_CZEKOLADY_PC" Addr="0012" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="V_SUM_ORZESZKOW_PC" PName="projekt2.V_SUM_ORZESZKOW_PC" Addr="0014" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="V_SUM_MIESZALNIK_OUT_PC" PName="projekt2.V_SUM_MIESZALNIK_OUT_PC" Addr="0016" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="C_ORZESZKOW_PC" PName="projekt2.C_ORZESZKOW_PC" Addr="0018" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="C_CZEKOLADY_PC" PName="projekt2.C_CZEKOLADY_PC" Addr="001a" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="REQ_C_ORZESZKOW_PC" PName="projekt2.REQ_C_ORZESZKOW_PC" Addr="001c" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="REQ_C_CZEKOLADY_PC" PName="projekt2.REQ_C_CZEKOLADY_PC" Addr="001e" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="C_ORZESZKOW_HIGH" PName="projekt2.C_ORZESZKOW_HIGH" Addr="0020" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="C_ORZESZKOW_LOW" PName="projekt2.C_ORZESZKOW_LOW" Addr="0021" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="C_CZEKOLADY_HIGH" PName="projekt2.C_CZEKOLADY_HIGH" Addr="0022" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="C_CZEKOLADY_LOW" PName="projekt2.C_CZEKOLADY_LOW" Addr="0023" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="EPS_C_ORZESZKOW_PC" PName="projekt2.EPS_C_ORZESZKOW_PC" Addr="0024" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="EPS_C_CZEKOLADY_PC" PName="projekt2.EPS_C_CZEKOLADY_PC" Addr="0026" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="AUTO_REG_C" PName="projekt2.AUTO_REG_C" Addr="0028" AdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="V_ORZESZKOW_PC" PName="projekt2.V_ORZESZKOW_PC" Addr="002a" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="V_CZEKOLADY_PC" PName="projekt2.V_CZEKOLADY_PC" Addr="002c" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="EPS_TOL_CZEKOLADY_PC" PName="projekt2.EPS_TOL_CZEKOLADY_PC" Addr="002e" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="EPS_TOL_ORZESZKOW_PC" PName="projekt2.EPS_TOL_ORZESZKOW_PC" Addr="0030" AdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="VAR" LName="V_WMIESZALNIKU" PName="projekt2.V_WMIESZALNIKU" Addr="0034" AdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00004000" />
+      <OBJ ObjType="TASK" LName="Fabryka" PName="projekt2.Fabryka" Addr="0000" AdrType="gdlabel" Size="435">
+        <OBJ ObjType="VAR" LName="STEROWNIK_01" PName="projekt2.Fabryka.STEROWNIK_01" Addr="0000" AdrType="rdlabel" CAddr="0000" CAdrType="gdlabel" Size="329" Type="STEROWNIK" PType="projekt2.STEROWNIK" TypeStatus="program" VFlags="00000000">
+          <OBJ ObjType="VAR" LName="V_ORZESZKOW" PName="projekt2.Fabryka.STEROWNIK_01.V_ORZESZKOW" Addr="0038" AdrType="rdlabel" CAddr="0038" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="V_CZEKOLADY" PName="projekt2.Fabryka.STEROWNIK_01.V_CZEKOLADY" Addr="003c" AdrType="rdlabel" CAddr="003c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="V_SUM_CZEKOLADY" PName="projekt2.Fabryka.STEROWNIK_01.V_SUM_CZEKOLADY" Addr="0040" AdrType="rdlabel" CAddr="0040" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="V_SUM_ORZESZKOW" PName="projekt2.Fabryka.STEROWNIK_01.V_SUM_ORZESZKOW" Addr="0044" AdrType="rdlabel" CAddr="0044" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="V_SUM_MIESZALNIK_OUT" PName="projekt2.Fabryka.STEROWNIK_01.V_SUM_MIESZALNIK_OUT" Addr="0048" AdrType="rdlabel" CAddr="0048" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="Q_ORZESZKOW" PName="projekt2.Fabryka.STEROWNIK_01.Q_ORZESZKOW" Addr="004c" AdrType="rdlabel" CAddr="004c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="Q_CZEKOLADY" PName="projekt2.Fabryka.STEROWNIK_01.Q_CZEKOLADY" Addr="0050" AdrType="rdlabel" CAddr="0050" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="Q_MIESZALNIK_OUT" PName="projekt2.Fabryka.STEROWNIK_01.Q_MIESZALNIK_OUT" Addr="0054" AdrType="rdlabel" CAddr="0054" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="C_ORZESZKOW" PName="projekt2.Fabryka.STEROWNIK_01.C_ORZESZKOW" Addr="0058" AdrType="rdlabel" CAddr="0058" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="C_CZEKOLADY" PName="projekt2.Fabryka.STEROWNIK_01.C_CZEKOLADY" Addr="005c" AdrType="rdlabel" CAddr="005c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="REQ_C_ORZESZKOW" PName="projekt2.Fabryka.STEROWNIK_01.REQ_C_ORZESZKOW" Addr="0060" AdrType="rdlabel" CAddr="0060" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="REQ_C_CZEKOLADY" PName="projekt2.Fabryka.STEROWNIK_01.REQ_C_CZEKOLADY" Addr="0064" AdrType="rdlabel" CAddr="0064" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="EPS_C_ORZESZKOW" PName="projekt2.Fabryka.STEROWNIK_01.EPS_C_ORZESZKOW" Addr="0068" AdrType="rdlabel" CAddr="0068" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="EPS_C_CZEKOLADY" PName="projekt2.Fabryka.STEROWNIK_01.EPS_C_CZEKOLADY" Addr="006c" AdrType="rdlabel" CAddr="006c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="EPS_TOL_CZEKOLADY" PName="projekt2.Fabryka.STEROWNIK_01.EPS_TOL_CZEKOLADY" Addr="0070" AdrType="rdlabel" CAddr="0070" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="EPS_TOL_ORZESZKOW" PName="projekt2.Fabryka.STEROWNIK_01.EPS_TOL_ORZESZKOW" Addr="0074" AdrType="rdlabel" CAddr="0074" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="SAMPLETIME" PName="projekt2.Fabryka.STEROWNIK_01.SAMPLETIME" Addr="0078" AdrType="rdlabel" CAddr="0078" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="SILNIK_ON_TON" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_ON_TON" Addr="0080" AdrType="rdlabel" CAddr="0080" CAdrType="gdlabel" Size="21" Type="TON" PType="IEC_61131.TON" TypeStatus="function block" VFlags="00000000">
+            <OBJ ObjType="VAR" LName="IN" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_ON_TON.IN" Addr="0000" AdrType="rdlabel" CAddr="0080" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00000010" />
+            <OBJ ObjType="VAR" LName="PT" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_ON_TON.PT" Addr="0004" AdrType="rdlabel" CAddr="0084" CAdrType="gdlabel" Size="4" Type="TIME" PType="$DEFAULT.TIME" TypeStatus="build-in type" VFlags="00000010" />
+            <OBJ ObjType="VAR" LName="Q" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_ON_TON.Q" Addr="0001" AdrType="rdlabel" CAddr="0081" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00000020" />
+            <OBJ ObjType="VAR" LName="ET" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_ON_TON.ET" Addr="0008" AdrType="rdlabel" CAddr="0088" CAdrType="gdlabel" Size="4" Type="TIME" PType="$DEFAULT.TIME" TypeStatus="build-in type" VFlags="00000020" />
+            <OBJ ObjType="VAR" LName="?IF?B0074" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_ON_TON.?IF?B0074" Addr="0002" AdrType="rdlabel" CAddr="0082" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+            <OBJ ObjType="VAR" LName="?IF?B0079" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_ON_TON.?IF?B0079" Addr="0003" AdrType="rdlabel" CAddr="0083" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+            <OBJ ObjType="VAR" LName="?F?CUR_TIME007C" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_ON_TON.?F?CUR_TIME007C" Addr="0010" AdrType="rdlabel" CAddr="0090" CAdrType="gdlabel" Size="4" Type="TIME" PType="$DEFAULT.TIME" TypeStatus="build-in type" VFlags="00200000" />
+            <OBJ ObjType="VAR" LName="?IF?B007E" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_ON_TON.?IF?B007E" Addr="0014" AdrType="rdlabel" CAddr="0094" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          </OBJ>
+          <OBJ ObjType="VAR" LName="SILNIK_OFF_TON" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_OFF_TON" Addr="0098" AdrType="rdlabel" CAddr="0098" CAdrType="gdlabel" Size="21" Type="TON" PType="IEC_61131.TON" TypeStatus="function block" VFlags="00000000">
+            <OBJ ObjType="VAR" LName="IN" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_OFF_TON.IN" Addr="0000" AdrType="rdlabel" CAddr="0098" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00000010" />
+            <OBJ ObjType="VAR" LName="PT" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_OFF_TON.PT" Addr="0004" AdrType="rdlabel" CAddr="009c" CAdrType="gdlabel" Size="4" Type="TIME" PType="$DEFAULT.TIME" TypeStatus="build-in type" VFlags="00000010" />
+            <OBJ ObjType="VAR" LName="Q" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_OFF_TON.Q" Addr="0001" AdrType="rdlabel" CAddr="0099" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00000020" />
+            <OBJ ObjType="VAR" LName="ET" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_OFF_TON.ET" Addr="0008" AdrType="rdlabel" CAddr="00a0" CAdrType="gdlabel" Size="4" Type="TIME" PType="$DEFAULT.TIME" TypeStatus="build-in type" VFlags="00000020" />
+            <OBJ ObjType="VAR" LName="?IF?B0074" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_OFF_TON.?IF?B0074" Addr="0002" AdrType="rdlabel" CAddr="009a" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+            <OBJ ObjType="VAR" LName="?IF?B0079" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_OFF_TON.?IF?B0079" Addr="0003" AdrType="rdlabel" CAddr="009b" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+            <OBJ ObjType="VAR" LName="?F?CUR_TIME007C" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_OFF_TON.?F?CUR_TIME007C" Addr="0010" AdrType="rdlabel" CAddr="00a8" CAdrType="gdlabel" Size="4" Type="TIME" PType="$DEFAULT.TIME" TypeStatus="build-in type" VFlags="00200000" />
+            <OBJ ObjType="VAR" LName="?IF?B007E" PName="projekt2.Fabryka.STEROWNIK_01.SILNIK_OFF_TON.?IF?B007E" Addr="0014" AdrType="rdlabel" CAddr="00ac" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          </OBJ>
+          <OBJ ObjType="VAR" LName="MAX_VOLUME" PName="projekt2.Fabryka.STEROWNIK_01.MAX_VOLUME" Addr="007c" AdrType="rdlabel" CAddr="007c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="HIGH_VOLUME" PName="projekt2.Fabryka.STEROWNIK_01.HIGH_VOLUME" Addr="00b0" AdrType="rdlabel" CAddr="00b0" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="LOW_VOLUME" PName="projekt2.Fabryka.STEROWNIK_01.LOW_VOLUME" Addr="00b4" AdrType="rdlabel" CAddr="00b4" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="EMPTY_VOLUME" PName="projekt2.Fabryka.STEROWNIK_01.EMPTY_VOLUME" Addr="00b8" AdrType="rdlabel" CAddr="00b8" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="?LR?AND07A4" PName="projekt2.Fabryka.STEROWNIK_01.?LR?AND07A4" Addr="0029" AdrType="rdlabel" CAddr="0029" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?LR?AND07A6" PName="projekt2.Fabryka.STEROWNIK_01.?LR?AND07A6" Addr="0032" AdrType="rdlabel" CAddr="0032" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?IF?B07AB" PName="projekt2.Fabryka.STEROWNIK_01.?IF?B07AB" Addr="0033" AdrType="rdlabel" CAddr="0033" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?IF?B07AF" PName="projekt2.Fabryka.STEROWNIK_01.?IF?B07AF" Addr="0095" AdrType="rdlabel" CAddr="0095" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?IF?B07B3" PName="projekt2.Fabryka.STEROWNIK_01.?IF?B07B3" Addr="0096" AdrType="rdlabel" CAddr="0096" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?IF?B07B7" PName="projekt2.Fabryka.STEROWNIK_01.?IF?B07B7" Addr="0097" AdrType="rdlabel" CAddr="0097" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?L?CST07BB" PName="projekt2.Fabryka.STEROWNIK_01.?L?CST07BB" Addr="00bc" AdrType="rdlabel" CAddr="00bc" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00100000" ConstValue="1000.0" />
+          <OBJ ObjType="VAR" LName="?F?INT_TO_REAL07BC" PName="projekt2.Fabryka.STEROWNIK_01.?F?INT_TO_REAL07BC" Addr="00c0" AdrType="rdlabel" CAddr="00c0" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?INT_TO_REAL07BE" PName="projekt2.Fabryka.STEROWNIK_01.?F?INT_TO_REAL07BE" Addr="00c4" AdrType="rdlabel" CAddr="00c4" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?INT_TO_REAL07C0" PName="projekt2.Fabryka.STEROWNIK_01.?F?INT_TO_REAL07C0" Addr="00c8" AdrType="rdlabel" CAddr="00c8" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_DIV07C4" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_DIV07C4" Addr="00cc" AdrType="rdlabel" CAddr="00cc" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_DIV07C6" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_DIV07C6" Addr="00d0" AdrType="rdlabel" CAddr="00d0" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_DIV07CA" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_DIV07CA" Addr="00d4" AdrType="rdlabel" CAddr="00d4" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_DIV07CC" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_DIV07CC" Addr="00d8" AdrType="rdlabel" CAddr="00d8" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?IF?B07CE" PName="projekt2.Fabryka.STEROWNIK_01.?IF?B07CE" Addr="00ad" AdrType="rdlabel" CAddr="00ad" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_DIV07D6" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_DIV07D6" Addr="00dc" AdrType="rdlabel" CAddr="00dc" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL07D7" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL07D7" Addr="00e0" AdrType="rdlabel" CAddr="00e0" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_DIV07D9" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_DIV07D9" Addr="00e4" AdrType="rdlabel" CAddr="00e4" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL07DA" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL07DA" Addr="00e8" AdrType="rdlabel" CAddr="00e8" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?IF?B07DC" PName="projekt2.Fabryka.STEROWNIK_01.?IF?B07DC" Addr="00ae" AdrType="rdlabel" CAddr="00ae" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_DIV07DF" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_DIV07DF" Addr="00ec" AdrType="rdlabel" CAddr="00ec" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?INT_TO_REAL07E1" PName="projekt2.Fabryka.STEROWNIK_01.?F?INT_TO_REAL07E1" Addr="00f0" AdrType="rdlabel" CAddr="00f0" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?INT_TO_REAL07E3" PName="projekt2.Fabryka.STEROWNIK_01.?F?INT_TO_REAL07E3" Addr="00f4" AdrType="rdlabel" CAddr="00f4" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?INT_TO_REAL07E5" PName="projekt2.Fabryka.STEROWNIK_01.?F?INT_TO_REAL07E5" Addr="00f8" AdrType="rdlabel" CAddr="00f8" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?L?CST07E7" PName="projekt2.Fabryka.STEROWNIK_01.?L?CST07E7" Addr="00fc" AdrType="rdlabel" CAddr="00fc" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00100000" ConstValue="1.0" />
+          <OBJ ObjType="VAR" LName="?IF?B07ED" PName="projekt2.Fabryka.STEROWNIK_01.?IF?B07ED" Addr="00af" AdrType="rdlabel" CAddr="00af" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_ADD07EF" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_ADD07EF" Addr="0100" AdrType="rdlabel" CAddr="0100" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?IF?T07F2" PName="projekt2.Fabryka.STEROWNIK_01.?IF?T07F2" Addr="0104" AdrType="rdlabel" CAddr="0104" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_SUB07F3" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_SUB07F3" Addr="0108" AdrType="rdlabel" CAddr="0108" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?IF?B07F6" PName="projekt2.Fabryka.STEROWNIK_01.?IF?B07F6" Addr="0105" AdrType="rdlabel" CAddr="0105" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_ADD07F8" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_ADD07F8" Addr="010c" AdrType="rdlabel" CAddr="010c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?IF?T07FB" PName="projekt2.Fabryka.STEROWNIK_01.?IF?T07FB" Addr="0106" AdrType="rdlabel" CAddr="0106" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_SUB07FC" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_SUB07FC" Addr="0110" AdrType="rdlabel" CAddr="0110" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL0803" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL0803" Addr="0114" AdrType="rdlabel" CAddr="0114" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL0805" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL0805" Addr="0118" AdrType="rdlabel" CAddr="0118" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL0807" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL0807" Addr="011c" AdrType="rdlabel" CAddr="011c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?L?CST0809" PName="projekt2.Fabryka.STEROWNIK_01.?L?CST0809" Addr="0120" AdrType="rdlabel" CAddr="0120" CAdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00100000" ConstValue="1000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL080A" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL080A" Addr="0124" AdrType="rdlabel" CAddr="0124" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?REAL_TO_INT080B" PName="projekt2.Fabryka.STEROWNIK_01.?F?REAL_TO_INT080B" Addr="0122" AdrType="rdlabel" CAddr="0122" CAdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL080D" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL080D" Addr="0128" AdrType="rdlabel" CAddr="0128" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?REAL_TO_INT080E" PName="projekt2.Fabryka.STEROWNIK_01.?F?REAL_TO_INT080E" Addr="012c" AdrType="rdlabel" CAddr="012c" CAdrType="gdlabel" Size="2" Type="INT" PType="$DEFAULT.INT" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL0810" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL0810" Addr="0130" AdrType="rdlabel" CAddr="0130" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL0812" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL0812" Addr="0134" AdrType="rdlabel" CAddr="0134" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL0814" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL0814" Addr="0138" AdrType="rdlabel" CAddr="0138" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?L?CST0816" PName="projekt2.Fabryka.STEROWNIK_01.?L?CST0816" Addr="013c" AdrType="rdlabel" CAddr="013c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00100000" ConstValue="10.0" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL0817" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL0817" Addr="0140" AdrType="rdlabel" CAddr="0140" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL0819" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL0819" Addr="0144" AdrType="rdlabel" CAddr="0144" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL081B" PName="projekt2.Fabryka.STEROWNIK_01.?F?$DEFAULT_MUL081B" Addr="0148" AdrType="rdlabel" CAddr="0148" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+        </OBJ>
+        <OBJ ObjType="VAR" LName="SYMULATOR_02" PName="projekt2.Fabryka.SYMULATOR_02" Addr="0000" AdrType="rdlabel" CAddr="0000" CAdrType="gdlabel" Size="106" Type="SYMULATOR" PType="projekt2.SYMULATOR" TypeStatus="program" VFlags="00000000">
+          <OBJ ObjType="VAR" LName="Q_ORZESZKOW" PName="projekt2.Fabryka.SYMULATOR_02.Q_ORZESZKOW" Addr="014c" AdrType="rdlabel" CAddr="014c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="Q_CZEKOLADY" PName="projekt2.Fabryka.SYMULATOR_02.Q_CZEKOLADY" Addr="0150" AdrType="rdlabel" CAddr="0150" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="Q_MIESZALNIK_OUT" PName="projekt2.Fabryka.SYMULATOR_02.Q_MIESZALNIK_OUT" Addr="0154" AdrType="rdlabel" CAddr="0154" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="SAMPLETIME" PName="projekt2.Fabryka.SYMULATOR_02.SAMPLETIME" Addr="0158" AdrType="rdlabel" CAddr="0158" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00000000" />
+          <OBJ ObjType="VAR" LName="?L?CST081D" PName="projekt2.Fabryka.SYMULATOR_02.?L?CST081D" Addr="015c" AdrType="rdlabel" CAddr="015c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00100000" ConstValue="1000.0" />
+          <OBJ ObjType="VAR" LName="?F?INT_TO_REAL081E" PName="projekt2.Fabryka.SYMULATOR_02.?F?INT_TO_REAL081E" Addr="0160" AdrType="rdlabel" CAddr="0160" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?INT_TO_REAL0820" PName="projekt2.Fabryka.SYMULATOR_02.?F?INT_TO_REAL0820" Addr="0164" AdrType="rdlabel" CAddr="0164" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?INT_TO_REAL0822" PName="projekt2.Fabryka.SYMULATOR_02.?F?INT_TO_REAL0822" Addr="0168" AdrType="rdlabel" CAddr="0168" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_DIV0826" PName="projekt2.Fabryka.SYMULATOR_02.?F?$DEFAULT_DIV0826" Addr="016c" AdrType="rdlabel" CAddr="016c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_DIV082A" PName="projekt2.Fabryka.SYMULATOR_02.?F?$DEFAULT_DIV082A" Addr="0170" AdrType="rdlabel" CAddr="0170" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_DIV082E" PName="projekt2.Fabryka.SYMULATOR_02.?F?$DEFAULT_DIV082E" Addr="0174" AdrType="rdlabel" CAddr="0174" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?IF?B0830" PName="projekt2.Fabryka.SYMULATOR_02.?IF?B0830" Addr="0107" AdrType="rdlabel" CAddr="0107" CAdrType="gdlabel" Size="1" Type="BOOL" PType="$DEFAULT.BOOL" TypeStatus="build-in type" VFlags="00200000" />
+          <OBJ ObjType="VAR" LName="?L?CST0832" PName="projekt2.Fabryka.SYMULATOR_02.?L?CST0832" Addr="0178" AdrType="rdlabel" CAddr="0178" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00100000" ConstValue="0.0" />
+          <OBJ ObjType="VAR" LName="?F?$DEFAULT_MUL0834" PName="projekt2.Fabryka.SYMULATOR_02.?F?$DEFAULT_MUL0834" Addr="017c" AdrType="rdlabel" CAddr="017c" CAdrType="gdlabel" Size="4" Type="REAL" PType="$DEFAULT.REAL" TypeStatus="build-in type" VFlags="00200000" />
+        </OBJ>
+      </OBJ>
+    </DATA_MAP>
+    <INFO>
+      <DT_EXPORT year="2016" month="6" day="6" hour="0" minutes="36" seconds="24" milisec="910" />
+      <COMPANY><![CDATA[]]></COMPANY>
+      <MANAGER><![CDATA[KubaMiszcz]]></MANAGER>
+      <VERSION><![CDATA[]]></VERSION>
+      <CREATED year="2016" month="5" day="29" hour="10" minutes="48" seconds="11" milisec="683" />
+      <PHYSVER value="290" />
+      <LAST_COMPILED year="2016" month="6" day="6" hour="0" minutes="36" seconds="24" milisec="609" />
+    </INFO>
+  </TARGET>
+</CPDEV>
